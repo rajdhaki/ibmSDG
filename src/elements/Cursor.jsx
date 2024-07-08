@@ -17,7 +17,7 @@ const Cursor = () => {
                 x: e.x,
                 y: e.y,
                 ease: "back.out(1.7)",
-                duration: 1
+                duration: 2
             })
         })
     })
