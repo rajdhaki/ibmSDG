@@ -1,11 +1,15 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
+import context from '../context/Context'
 
 const Cursor = () => {
     var main = useRef(null)
     const cursor = useRef(null)
+
+    const {setCursorRef} = useContext(context)
+    setCursorRef(cursor)
 
     useGSAP(() => {
         main.current.addEventListener('mousemove', e => {
