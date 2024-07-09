@@ -1,15 +1,16 @@
 import React from 'react'
 import './App.css'
-import Index from './components/Index'
 import Cursor from './elements/Cursor'
 import ContextProvider from './context/contextProvider'
+import Globe from './components/Globe'
+import Index from './pages/Index'
 
 
 function App() {
   return (
     <ContextProvider>
-      <Index />
       <Cursor />
+      <Index/>
     </ContextProvider>
   )
 }

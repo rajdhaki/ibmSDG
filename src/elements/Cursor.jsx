@@ -5,14 +5,13 @@ import { useRef } from 'react'
 import context from '../context/Context'
 
 const Cursor = () => {
-    var main = useRef(null)
     const cursor = useRef(null)
 
     const {setCursorRef} = useContext(context)
     setCursorRef(cursor)
 
     useGSAP(() => {
-        main.current.addEventListener('mousemove', e => {
+        window.addEventListener('mousemove', e => {
             gsap.to(cursor.current, {
                 x: e.x,
                 y: e.y,
@@ -23,9 +22,9 @@ const Cursor = () => {
     })
 
     return (
-        <div ref={main} id="main" style={{ "width": "100vw", "height": "100vh" }}>
+        
             <div ref={cursor} id='cursor' className='w-2.5 h-2.5 bg-blue-950 rota rounded-full fixed'></div>
-        </div>
+        
     )
 }
 
