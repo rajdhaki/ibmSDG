@@ -21,7 +21,7 @@ function Globe() {
         const earthTexture = loader.load(Earthimg);
 
         // Add Earth globe using sphere geometry
-        const geometry = new THREE.SphereGeometry(5, 32, 32);
+        const geometry = new THREE.SphereGeometry(8, 32, 32);
         const material = new THREE.MeshPhongMaterial({
             map: earthTexture,
             specular: new THREE.Color('grey') // this gives the water a shiny effect
@@ -55,7 +55,7 @@ function Globe() {
         };
     }, []);
 
-    return <div ref={mountRef} style={{ width: '70%', height: '650px' }} />;
+    return <div ref={mountRef} style={{ width: '100%', height: '500px' }} />;
 }
 
 export default Globe;
