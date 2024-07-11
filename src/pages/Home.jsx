@@ -14,12 +14,16 @@ Chart.register(
   Tooltip,
   Legend
 )
-
 import { Doughnut } from 'react-chartjs-2'
+import context from '../context/Context'
+
 
 const Home = () => {
 
+const {cursorRef} = React.useContext(context)
+
 const SDG = useRef(null)
+const sdgBtn = useRef(null)
 
 useGSAP(()=>{
   gsap.from(SDG.current, {
@@ -28,6 +32,31 @@ useGSAP(()=>{
     opacity: 0
   })
 })
+
+const cursorSize = ()=>{
+  cursorRef.current.innerHTML = "tab"
+   gsap.to(cursorRef.current,{
+    scale: 3,
+    backgroundColor: "#00FFFFFF"
+  })
+}
+
+const defaultCursor = ()=>{
+  cursorRef.current.innerHTML = ""
+  gsap.to(cursorRef.current,{
+    scale: 1,
+    backgroundColor : "#172554"
+  })
+}
+
+// useGSAP(()=>{
+// sdgBtn.current.addEventListener('mouseenter', ()=>{
+//   gsap.to(cursorRef.current,{
+//     x:1000
+//   })
+// })
+//   })
+
 
   const data = {
     labels: ["Yes", "NO"],
@@ -62,12 +91,12 @@ useGSAP(()=>{
           <div className='absolute -top-4 px-6'>
             <h3 className='pb-2 text-xl font-bold'>"Our Goals, Our Planet, Our Future"</h3>
             <p className=' text-lg'>This text emphasizes collective responsibility and future-focused thinking.</p>
-            <button className='mt-4 px-6 py-1 rounded-full border-blue-950 border-solid border-2 ms-16' >Know More</button>
+            <button ref={sdgBtn} onMouseEnter={cursorSize} onMouseLeave={defaultCursor} className='mt-4 px-6 py-1 rounded-full border-blue-950 border-solid border-2 ms-16' >Know More</button>
           </div>
           <div className='absolute top-52 px-6'>
             <h3 className='pb-2 text-xl font-bold'>"Our Goals, Our Planet, Our Future"</h3>
             <p className=' text-lg'>This text emphasizes collective responsibility and future-focused thinking.</p>
-            <button className='mt-4 px-6 py-1 rounded-full border-blue-950 border-solid border-2 ms-16' >Know More</button>
+            <button ref={sdgBtn} onMouseEnter={cursorSize} onMouseLeave={defaultCursor} className='mt-4 px-6 py-1 rounded-full border-blue-950 border-solid border-2 ms-16' >Know More</button>
           </div>
       
         </div>

@@ -23,7 +23,7 @@ const Cursor = () => {
 
     return (
         
-            <div ref={cursor} id='cursor' className='w-2.5 h-2.5 bg-blue-950 rota rounded-full fixed'></div>
+            <div ref={cursor} id='cursor' style={{"fontSize" : "6px", "textAlign": "center"}} className='w-2.5 h-2.5 bg-blue-950 rota rounded-full fixed flex justify-center'></div>
         
     )
 }
