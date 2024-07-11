@@ -64,16 +64,12 @@ useGSAP(()=>{
             <p className=' text-lg'>This text emphasizes collective responsibility and future-focused thinking.</p>
             <button className='mt-6 px-8 py-2 rounded-full border-blue-950 border-solid border-2 ms-20' >Know More</button>
           </div>
-          <div className='absolute -top-7 px-6'>
+          <div className='absolute top-44 px-6'>
             <h3 className='pb-2 text-xl font-bold'>"Our Goals, Our Planet, Our Future"</h3>
             <p className=' text-lg'>This text emphasizes collective responsibility and future-focused thinking.</p>
             <button className='mt-6 px-8 py-2 rounded-full border-blue-950 border-solid border-2 ms-20' >Know More</button>
           </div>
-          <div className='absolute -top-7 px-6'>
-            <h3 className='pb-2 text-xl font-bold'>"Our Goals, Our Planet, Our Future"</h3>
-            <p className=' text-lg'>This text emphasizes collective responsibility and future-focused thinking.</p>
-            <button className='mt-6 px-8 py-2 rounded-full border-blue-950 border-solid border-2 ms-20' >Know More</button>
-          </div>
+      
         </div>
         <div style={{ flex: 2, marginTop: '24vh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
           <Globe />
