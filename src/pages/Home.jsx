@@ -51,7 +51,7 @@ useGSAP(()=>{
 
   return (
     <>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', padding: '1vh 4vw' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', padding: '1vh 6vw' }}>
         <div ref={SDG} style={{ flex: 1, padding: '0px 20px', position: 'relative' }}>
           <div className='flex flex-col absolute -top-48 start-10 text-5xl font-extrabold tracking-wide'>
             <h1>SUSTAINABLE</h1>
