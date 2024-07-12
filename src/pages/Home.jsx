@@ -34,7 +34,7 @@ useGSAP(()=>{
 })
 
 const cursorSize = ()=>{
-  cursorRef.current.innerHTML = "tab"
+  cursorRef.current.innerHTML = "Tab"
    gsap.to(cursorRef.current,{
     scale: 3,
     backgroundColor: "#00FFFFFF"
