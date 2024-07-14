@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, { useRef } from 'react'
 import Globe from '../components/Globe'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
@@ -16,47 +16,40 @@ Chart.register(
 )
 import { Doughnut } from 'react-chartjs-2'
 import context from '../context/Context'
+import Feature from '../components/Feature'
+
 
 
 const Home = () => {
 
-const {cursorRef} = React.useContext(context)
+  const { cursorRef } = React.useContext(context)
 
-const SDG = useRef(null)
-const sdgBtn = useRef(null)
+  const SDG = useRef(null)
+  const sdgBtn = useRef(null)
 
-useGSAP(()=>{
-  gsap.from(SDG.current, {
-    x : -150,
-    duration : 2,
-    opacity: 0
+  useGSAP(() => {
+    gsap.from(SDG.current, {
+      x: -150,
+      duration: 2,
+      opacity: 0
+    })
   })
-})
 
-const cursorSize = ()=>{
-  cursorRef.current.innerHTML = "Tab"
-   gsap.to(cursorRef.current,{
-    scale: 3,
-    backgroundColor: "#00FFFFFF"
-  })
-}
+  const cursorSize = () => {
+    cursorRef.current.innerHTML = "Tab"
+    gsap.to(cursorRef.current, {
+      scale: 3,
+      backgroundColor: "#00FFFFFF"
+    })
+  }
 
-const defaultCursor = ()=>{
-  cursorRef.current.innerHTML = ""
-  gsap.to(cursorRef.current,{
-    scale: 1,
-    backgroundColor : "#172554"
-  })
-}
-
-// useGSAP(()=>{
-// sdgBtn.current.addEventListener('mouseenter', ()=>{
-//   gsap.to(cursorRef.current,{
-//     x:1000
-//   })
-// })
-//   })
-
+  const defaultCursor = () => {
+    cursorRef.current.innerHTML = ""
+    gsap.to(cursorRef.current, {
+      scale: 1,
+      backgroundColor: "#172554"
+    })
+  }
 
   const data = {
     labels: ["Yes", "NO"],
@@ -78,10 +71,12 @@ const defaultCursor = ()=>{
     }]
   }
 
+
+
   return (
     <>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', padding: '1vh 7vw' }}>
-        <div ref={SDG} style={{ flex: 1, padding: '0px 20px', position: 'relative' }}>
+      <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', padding: '1vh 7vw' }}>
+        <div ref={SDG} style={{ flex: 1, padding: '0px 20px', position: 'relative', top: '-17vh' }}>
           <div className='flex flex-col absolute -top-44 start-10 text-5xl font-extrabold tracking-wide'>
             <h1>SUSTAINABLE</h1>
             <h1>DEVELOPMENT</h1>
@@ -98,16 +93,16 @@ const defaultCursor = ()=>{
             <p className=' text-lg'>This text emphasizes collective responsibility and future-focused thinking.</p>
             <button ref={sdgBtn} onMouseEnter={cursorSize} onMouseLeave={defaultCursor} className='mt-4 px-6 py-1 rounded-full border-blue-950 border-solid border-2 ms-16' >Know More</button>
           </div>
-      
+
         </div>
-        <div style={{ flex: 2, marginTop: '38vh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+        <div style={{ flex: 2, marginTop: '3.5vh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
           <Globe />
           <div>
             <h3 className='pb-2 text-3xl font-bold text-center '>"Innovate, Implement, Sustain"</h3>
             <p className=' text-xl text-center px-14'>This option focuses on the process of achieving sustainability—through innovation, implementation, and ongoing commitment.</p>
           </div>
         </div>
-        <div style={{ flex: 0, padding: '20px', marginTop: '34vh'}}>
+        <div style={{ flex: 0, padding: '20px', marginTop: '2.5vh' }}>
 
           <div>
             <Doughnut
@@ -126,7 +121,23 @@ const defaultCursor = ()=>{
 
 
         </div>
-      </div>
+      </section>
+
+
+      <section className='py-6 px-36 overflow-x-hidden '>
+      <div>
+          <h1 className=' text-5xl font-bold  border-solid border-b-2 border-blue-900'>Features</h1>
+          <div className='flex '>
+        <Feature  title="TRACKER" para={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sit tenetur laudantium possimus minima! Assumenda doloribus dolorem at illum dicta ex provident recusandae, laborum laboriosam magni nostrum, temporibus, voluptas culpa!
+            Unde amet quod esse, dolores nobis repudiandae rem placeat ex delectus corrupti expedita neque aliquid! Maiores error nihil quibusdam distinctio nulla, aut, repellendus, hic ut ducimus sunt iure perspiciatis necessitatibus?`} />
+
+        {/* <Feature title="REPORTS" para={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sit tenetur laudantium possimus minima! Assumenda doloribus dolorem at illum dicta ex provident recusandae, laborum laboriosam magni nostrum, temporibus, voluptas culpa!Unde amet quod esse, dolores nobis repudiandae rem placeat ex delectus corrupti expedita neque aliquid! Maiores error nihil quibusdam distinctio nulla, aut, repellendus, hic ut ducimus sunt iure perspiciatis necessitatibus?`} />
+
+        <Feature  title="NEWS" para={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sit tenetur laudantium possimus minima! Assumenda doloribus dolorem at illum dicta ex provident recusandae, laborum laboriosam magni nostrum, temporibus, voluptas culpa!Unde amet quod esse, dolores nobis repudiandae rem placeat ex delectus corrupti expedita neque aliquid! Maiores error nihil quibusdam distinctio nulla, aut, repellendus, hic ut ducimus sunt iure perspiciatis necessitatibus?`} /> */}
+        </div>
+        </div>
+      </section>
+
     </>
   )
 }
