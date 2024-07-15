@@ -75,6 +75,11 @@ const Home = () => {
     }]
   }
 
+  const slides = [
+    { title: "TRACKER", para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sit tenetur laudantium possimus minima! Assumenda doloribus dolorem at illum dicta ex provident recusandae, laborum laboriosam magni nostrum, temporibus, voluptas culpa!Unde amet quod esse, dolores nobis repudiandae rem placeat ex delectus corrupti expedita neque aliquid! Maiores error nihil quibusdam distinctio nulla, aut, repellendus, hic ut ducimus sunt iure perspiciatis necessitatibus?" },
+    { title: "REPORTS", para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sit tenetur laudantium possimus minima! Assumenda doloribus dolorem at illum dicta ex provident recusandae, laborum laboriosam magni nostrum, temporibus, voluptas culpa!Unde amet quod esse, dolores nobis repudiandae rem placeat ex delectus corrupti expedita neque aliquid! Maiores error nihil quibusdam distinctio nulla, aut, repellendus, hic ut ducimus sunt iure perspiciatis necessitatibus?" },
+    { title: "NEWS", para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sit tenetur laudantium possimus minima! Assumenda doloribus dolorem at illum dicta ex provident recusandae, laborum laboriosam magni nostrum, temporibus, voluptas culpa!Unde amet quod esse, dolores nobis repudiandae rem placeat ex delectus corrupti expedita neque aliquid! Maiores error nihil quibusdam distinctio nulla, aut, repellendus, hic ut ducimus sunt iure perspiciatis necessitatibus?" }
+  ];
 
 
   return (
@@ -128,17 +133,14 @@ const Home = () => {
       </section>
 
 
-      <section className='py-6 px-36 overflow-x-hidden'>
-      <div>
+      <section className='py-6 px-36 overflow-x-hidden '>
+        <div >
           <h1 className=' text-5xl font-bold  border-solid border-b-2 border-blue-900'>Features</h1>
-          <div ref={featureRef}  >
-        <Feature  title="TRACKER" para={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sit tenetur laudantium possimus minima! Assumenda doloribus dolorem at illum dicta ex provident recusandae, laborum laboriosam magni nostrum, temporibus, voluptas culpa!
-            Unde amet quod esse, dolores nobis repudiandae rem placeat ex delectus corrupti expedita neque aliquid! Maiores error nihil quibusdam distinctio nulla, aut, repellendus, hic ut ducimus sunt iure perspiciatis necessitatibus?`} />
+          <div ref={featureRef} className='flex justify-center items-center ' >
 
-        {/* <Feature title="REPORTS" para={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sit tenetur laudantium possimus minima! Assumenda doloribus dolorem at illum dicta ex provident recusandae, laborum laboriosam magni nostrum, temporibus, voluptas culpa!Unde amet quod esse, dolores nobis repudiandae rem placeat ex delectus corrupti expedita neque aliquid! Maiores error nihil quibusdam distinctio nulla, aut, repellendus, hic ut ducimus sunt iure perspiciatis necessitatibus?`} />
+            <Feature slides={slides}/>
 
-        <Feature  title="NEWS" para={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sit tenetur laudantium possimus minima! Assumenda doloribus dolorem at illum dicta ex provident recusandae, laborum laboriosam magni nostrum, temporibus, voluptas culpa!Unde amet quod esse, dolores nobis repudiandae rem placeat ex delectus corrupti expedita neque aliquid! Maiores error nihil quibusdam distinctio nulla, aut, repellendus, hic ut ducimus sunt iure perspiciatis necessitatibus?`} /> */}
-        </div>
+          </div>
         </div>
       </section>
 
