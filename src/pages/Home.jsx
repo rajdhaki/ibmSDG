@@ -26,6 +26,9 @@ const Home = () => {
 
   const SDG = useRef(null)
   const sdgBtn = useRef(null)
+  const featureRef = useRef(null)
+
+
 
   useGSAP(() => {
     gsap.from(SDG.current, {
@@ -50,6 +53,7 @@ const Home = () => {
       backgroundColor: "#172554"
     })
   }
+
 
   const data = {
     labels: ["Yes", "NO"],
@@ -124,10 +128,10 @@ const Home = () => {
       </section>
 
 
-      <section className='py-6 px-36 overflow-x-hidden '>
+      <section className='py-6 px-36 overflow-x-hidden'>
       <div>
           <h1 className=' text-5xl font-bold  border-solid border-b-2 border-blue-900'>Features</h1>
-          <div className='flex '>
+          <div ref={featureRef}  >
         <Feature  title="TRACKER" para={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sit tenetur laudantium possimus minima! Assumenda doloribus dolorem at illum dicta ex provident recusandae, laborum laboriosam magni nostrum, temporibus, voluptas culpa!
             Unde amet quod esse, dolores nobis repudiandae rem placeat ex delectus corrupti expedita neque aliquid! Maiores error nihil quibusdam distinctio nulla, aut, repellendus, hic ut ducimus sunt iure perspiciatis necessitatibus?`} />
 
