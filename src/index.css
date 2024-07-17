@@ -1,3 +1,70 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply w-screen;
+  }
+  .main-heading {
+    @apply text-4xl text-center font-bold m-4;
+  }
+  .article-container {
+    @apply h-screen flex flex-col bg-[#ded6c4];
+  }
+
+  /*navbar*/
+  .nav-container {
+    @apply p-4 md:p-6 bg-[#ded6c4] flex justify-between items-center border-2 border-b-[#101f77];
+  }
+  .heading {
+    @apply text-4xl md:text-5xl font-bold;
+  }
+  .go-back {
+    @apply transition-all px-4 md:px-8 py-2 text-base md:text-xl font-semibold border-2 border-transparent text-[#ded6c4] bg-[#101f77];
+    @apply hover:border-2 hover:border-[#101f77] hover:bg-[#ded6c4] hover:text-[#101f77];
+  }
+
+  /* sidebar,article and footer container*/
+  .outer-container {
+    @apply h-[79%] grow p-6;
+  }
+  .inner-container {
+    @apply h-full flex flex-col md:flex-row;
+  }
+
+  /* sidebar */
+  .active {
+    @apply focus:bg-[#101f77] focus:text-[#ded6c4];
+  }
+  .sidebar-container {
+    @apply flex-shrink-0 bg-[#ded6c4] md:flex flex-col justify-start gap-2 overflow-y-scroll text-lg font-bold border-2 border-[#101f77] hidden;
+  }
+  .sidebar-child {
+    @apply transition-all px-8 py-2 border-b-2 border-r-2 border-b-[#101f77] border-r-[#101f77] bg-[#ded6c4] text-[#101f77];
+    @apply hover:border-b-transparent hover:text-[#ded6c4] hover:bg-[#101f77];
+  }
+
+  /* content  */
+  .content-container {
+    @apply overflow-y-scroll flex flex-col md:gap-8 md:px-8 text-lg;
+  }
+
+  /*youtube */
+  .youtube-container {
+    @apply flex justify-center items-center;
+  }
+  .youtube-frame {
+    @apply my-8 max-w-[100%] h-[35vh] md:h-[75vh];
+  }
+
+  /* footer */
+  .footer-container {
+    @apply p-6 mt-6 md:p-12 md:mt-0 flex justify-center items-center border-t-2 border-[#101f77];
+  }
+
+  /* mobile navigation */
+  .mobile-menu {
+    @apply h-[1000vh] border-2 border-r-0 border-[#101f77] flex flex-col overflow-auto mb-4 md:hidden;
+  }
+}
