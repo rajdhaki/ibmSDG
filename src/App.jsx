@@ -4,6 +4,7 @@ import Cursor from "./elements/Cursor";
 import ContextProvider from "./context/contextProvider";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import News from "./components/News";
 import Home from "./pages/Home";
 import Articles from "./pages/Articles";
 import SDG from "./articles/SDG";
@@ -112,6 +113,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/news",
+    element: <News />,
   },
 ]);
 

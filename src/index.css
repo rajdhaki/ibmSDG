@@ -68,3 +68,19 @@
     @apply h-[1000vh] border-2 border-r-0 border-[#101f77] flex flex-col overflow-auto mb-4 md:hidden;
   }
 }
+
+
+.news-heading {
+  animation: slide 20s linear infinite;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(130%);
+  }
+  100% {
+    transform: translateX(-130%);
+  }
+}
