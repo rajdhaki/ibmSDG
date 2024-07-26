@@ -16,7 +16,7 @@ const Navbar=(()=>{
     },[])
 
     return(
-        <div ref={el=>{textItem=el}} className='flex justify-evenly  items-center mt-6' id='parent'>
+        <div ref={el=>{textItem=el}} className='flex justify-evenly items-center mt-3' id='parent'>
             <div className='flex items-center gap-3'>
             <div>
                 <img src={Logo} alt='logo' className='h-28 cursor-pointer transform hover:scale-150 transition-all duration-150 ease-in-out'/>
@@ -32,13 +32,13 @@ const Navbar=(()=>{
             <div ref={el=>{navItem=el}} className='flex'> 
                 <ul className='hidden lg:flex items-center gap-12
                 text-xl text-black font-bold cursor-pointer font-sans '>
-                    <NavLink to="/"><li className='text-blue-950 p-1  hover:underline underline-offset
+                    <NavLink to="/"><li className='text-blue-950 p-1  hover:underline underline-offset-8
                     hover:text-green-600 transform hover:scale-150 transition-all duration-150 ease-in-out'>HOME</li></NavLink>
-                    <NavLink to="/News"><li className='text-blue-950 p-1 hover:underline underline-offset  hover:text-green-600
+                    <NavLink to="/News"><li className='text-blue-950 p-1 hover:underline underline-offset-8  hover:text-green-600
                     transform hover:scale-150 transition-all duration-150 ease-in-out'>NEWS</li></NavLink>
-                    <NavLink to="/education"><li className='text-blue-950 p-1 hover:underline underline-offset  hover:text-green-600
+                    <NavLink to="/education"><li className='text-blue-950 p-1 hover:underline underline-offset-8  hover:text-green-600
                     transform hover:scale-150 transition-all duration-150 ease-in-out'>EDUCATION</li></NavLink>
-                   <NavLink to="/aboutus"><li className='text-blue-950 p-1 hover:underline underline-offset  hover:text-green-600
+                   <NavLink to="/aboutus"><li className='text-blue-950 p-1 hover:underline underline-offset-8  hover:text-green-600
                     transform hover:scale-150 transition-all duration-150 ease-in-out'>ABOUT US</li></NavLink> 
                     </ul>
             </div>

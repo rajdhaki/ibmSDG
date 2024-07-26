@@ -5,8 +5,9 @@ import ContextProvider from "./context/contextProvider";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
-import Footer from './components/Footer';
 import Home from "./pages/Home";
+import About from "./components/About";
+import Footer from './components/Footer';
 import Articles from "./pages/Articles";
 import SDG from "./articles/SDG";
 import SDG1 from "./articles/SDG1";
@@ -114,6 +115,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element:<><Navbar/><Home /><Footer/></>,
+  },
+  {
+    path:"/aboutus",
+    element:<><Navbar/><About/></>,
   },
 ]);
 
