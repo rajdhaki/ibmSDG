@@ -3,8 +3,8 @@ import "./index.css";
 import Cursor from "./elements/Cursor";
 import ContextProvider from "./context/contextProvider";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
 import Navbar from "./components/Navbar";
+import News from "./components/News";
 import Home from "./pages/Home";
 import About from "./components/About";
 import Footer from './components/Footer';
@@ -119,6 +119,10 @@ const router = createBrowserRouter([
   {
     path:"/aboutus",
     element:<><Navbar/><About/></>,
+  },
+  {
+    path: "/news",
+    element: <News />,
   },
 ]);
 

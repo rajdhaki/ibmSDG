@@ -51,7 +51,9 @@ function Globe() {
 
         // Cleanup function to remove the renderer's DOM element
         return () => {
-            mountRef.current.removeChild(renderer.domElement);
+            if(mountRef.current){
+                mountRef.current.removeChild(renderer.domElement);
+            }
         };
     }, []);
 
