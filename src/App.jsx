@@ -4,6 +4,8 @@ import Cursor from "./elements/Cursor";
 import ContextProvider from "./context/contextProvider";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import Navbar from "./components/Navbar";
+import Footer from './components/Footer';
 import Home from "./pages/Home";
 import Articles from "./pages/Articles";
 import SDG from "./articles/SDG";
@@ -111,17 +113,20 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <Home />,
+    element:<><Navbar/><Home /><Footer/></>,
   },
 ]);
 
 function App() {
   return (
-    <ContextProvider>
-      <RouterProvider router={router}>
-        <Cursor />
-      </RouterProvider>
-    </ContextProvider>
+    <>
+    <RouterProvider router={router}/>
+    </>
+    // <ContextProvider>
+    //   <RouterProvider router={router}>
+    //     <Cursor />
+    //   </RouterProvider>
+    // </ContextProvider>
   );
 }
 
