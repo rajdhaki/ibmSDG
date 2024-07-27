@@ -32,14 +32,14 @@ const Navbar=(()=>{
             <div ref={el=>{navItem=el}} className='flex'> 
                 <ul className='hidden lg:flex items-center gap-12
                 text-xl text-black font-bold cursor-pointer font-sans '>
-                    <NavLink to="/"><li className='text-blue-950 p-1  hover:underline underline-offset-8
-                    hover:text-green-600 transform hover:scale-150 transition-all duration-150 ease-in-out'>HOME</li></NavLink>
-                    <NavLink to="/News"><li className='text-blue-950 p-1 hover:underline underline-offset-8  hover:text-green-600
-                    transform hover:scale-150 transition-all duration-150 ease-in-out'>NEWS</li></NavLink>
-                    <NavLink to="/education"><li className='text-blue-950 p-1 hover:underline underline-offset-8  hover:text-green-600
-                    transform hover:scale-150 transition-all duration-150 ease-in-out'>EDUCATION</li></NavLink>
-                   <NavLink to="/aboutus"><li className='text-blue-950 p-1 hover:underline underline-offset-8  hover:text-green-600
-                    transform hover:scale-150 transition-all duration-150 ease-in-out'>ABOUT US</li></NavLink> 
+                    <NavLink to="/"><li className='text-blue-950 p-1
+                     transform transition-all duration-150 ease-in-out underline-animation'>HOME</li></NavLink>
+                    <NavLink to="/News"><li className='text-blue-950 p-1
+                     transform transition-all duration-150 ease-in-out underline-animation'>NEWS</li></NavLink>
+                    <NavLink to="/education"><li className='text-blue-950 p-1
+                     transform transition-all duration-150 ease-in-out underline-animation'>EDUCATION</li></NavLink>
+                   <NavLink to="/aboutus"><li className='text-blue-950 p-1
+                     transform transition-all duration-150 ease-in-out underline-animation'>ABOUT US</li></NavLink> 
                     </ul>
             </div>
             {

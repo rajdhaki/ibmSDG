@@ -6,6 +6,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import NewsCard from '../components/NewsCard';
 import { Pagination, Stack } from '@mui/material';
+import Loader from './Loader';
+import Navbar from './Navbar';
 
 const News = () => {
     const [articles, setArticles] = useState([]);
@@ -37,21 +39,21 @@ const News = () => {
     const firstIndexOfNews = lastIndexOfNews - newsPerPage;
   
     const currentNews = articles.slice(firstIndexOfNews, lastIndexOfNews);
-
+    console.log(currentNews[0])
     if (!articles.length) {
-      return <div>Loading...</div>;
+      return <Loader/>;
     }
 
     const colors = ['#F31D38', '#4C9F38', '#C5192D', '#FF2C1E', '#30B2E5', '#F6C609', '#A21942', '#FB6431', '#DA146A',
       '#FD9D24', '#BF8B2E', '#FEF3D0', '#0A97D9', '#56C02B', '#00689D', '#19486A'];
 
     return (
-      <div className='py-12 w-full h-full overflow-x-hidden relative'>
-
-        <div className='text-3xl w-full h-[20rem] absolute top-0 right-0 center font-bold bg-[#3F7E44] text-center text-white'>
-          <p className='news-heading mt-20'>The Most Recent News Articles Concerning Sustainable Development Goals.</p>
+      <div className='w-screen h-screen overflow-x-hidden flex flex-col'>
+        <Navbar/>
+        <div className='text-3xl w-full h-[20rem] center font-bold bg-[#3F7E44] text-center text-white'>
+          <p className='news-heading my-16'>The Most Recent News Articles Concerning Sustainable Development Goals.</p>
           <div className=' text-white'> 
-            <ul className='flex gap-5 text-sm font-normal absolute top-72 left-10'>
+            <ul className='flex gap-5 text-sm font-normal ml-3 p-2'>
               <li className='items-center'>Latest News</li>
               <li className='items-center'> Top News</li>
               <li className='items-center'> Sustainable Development Goals</li>
@@ -60,7 +62,7 @@ const News = () => {
           </div>
         </div>
 
-        <div className='flex justify-center w-[100%] mx-auto mt-[25%]'>
+        {/* <div className='flex justify-center w-[100%] mx-auto mt-[25%] '>
           <div className='w-[80%]'>
             {currentNews.map((item, index) => (
               <div
@@ -73,9 +75,20 @@ const News = () => {
               </div>
             ))}
           </div>
+        </div> */}
+        <div className='w-full flex flex-1 mt-2'>
+          <div className='w-full p-3' style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(400px,1fr)"}}>
+            {currentNews.map((item,index)=>(
+               <NewsCard key={index} 
+               news = {item}
+               onClick={() => window.open(item.url, '_blank')}
+               />
+            )
+            )}
+          </div>
         </div>
 
-        <Stack mt="100px" alignItems="center" justifyContent="center" width="100%">
+        <Stack mt="10px" mb="20px" alignItems="center" justifyContent="center" width="100%">
           {articles.length > newsPerPage && (
             <Pagination
               color="standard"
