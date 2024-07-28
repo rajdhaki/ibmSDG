@@ -1,8 +1,13 @@
 import React from "react";
+import html2pdf from 'html2pdf.js';
 
 function SDG() {
+  const generatePDF = () => {
+    const element = document.getElementById('idpdf');
+    html2pdf().from(element).save();
+  };
   return (
-    <>
+    <div id="idpdf">
       <h1 className="main-heading">Sustainable Development Goals (SDGs)</h1>
       <br />
       <p>
@@ -109,7 +114,7 @@ function SDG() {
         inequality, climate change, environmental degradation, peace, and
         justice.
       </p>
-    </>
+    </div>
   );
 }
 
