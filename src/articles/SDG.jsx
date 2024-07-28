@@ -7,6 +7,7 @@ function SDG() {
     html2pdf().from(element).save();
   };
   return (
+   <>
     <div id="idpdf">
       <h1 className="main-heading">Sustainable Development Goals (SDGs)</h1>
       <br />
@@ -115,6 +116,10 @@ function SDG() {
         justice.
       </p>
     </div>
+      <div className="text-center p-2">
+         <button onClick={generatePDF}>download</button>
+      </div>
+   </>
   );
 }
 
