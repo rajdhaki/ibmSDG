@@ -1,108 +1,483 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import NewsCard from "../components/NewsCard";
+import { Pagination, Stack } from "@mui/material";
+import Loader from "./Loader";
+import "../news.css";
+import { Link } from "react-router-dom";
+import Clock from "./Clock";
 
+//icons
+import { FaHome } from "react-icons/fa";
+import { FaBookAtlas } from "react-icons/fa6";
+import { FaUserPlus } from "react-icons/fa";
+import { FaTemperatureHigh } from "react-icons/fa";
+import { FaDroplet } from "react-icons/fa6";
+import { FaWind } from "react-icons/fa";
+import { MdVisibility } from "react-icons/md";
+import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowUp } from "react-icons/io";
 
+function NewNews() {
+  const [articles, setArticles] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [weatherData, setWeatherData] = useState(false);
+  const [keyword, setKeyword] = useState("sustainable development goals");
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const apiKey = "6372363b03ed4eca80e52282511b7738";
+        const response = await axios.get(
+          `https://newsapi.org/v2/everything?q=${keyword}&apiKey=${apiKey}&pageSize=20`
+        );
+        setArticles(response.data.articles);
+      } catch (error) {}
+      try {
+        const lat = "28.6139";
+        const lon = "77.2088";
+        const weatherApiKey = "b8ce742ac6484e3440a7b8eb2d250758";
+        const response = await axios.get(
+          `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weatherApiKey}&units=metric#`
+        );
+        setWeatherData(response.data);
+      } catch (err) {
+        console.log(err);
+        throw err;
+      }
+    };
 
+    fetchNews();
+  }, []);
 
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import NewsCard from '../components/NewsCard';
-import { Pagination, Stack } from '@mui/material';
-import Loader from './Loader';
-import Navbar from './Navbar';
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const apiKey = "6372363b03ed4eca80e52282511b7738";
+        const response = await axios.get(
+          `https://newsapi.org/v2/everything?q=${keyword}&apiKey=${apiKey}&pageSize=20`
+        );
+        setArticles(response.data.articles);
+      } catch (error) {}
+    };
+    fetchNews();
+  }, [keyword]);
+  const [togglebar, setToggleBar] = useState(false);
+  const newsPerPage = 6;
 
-const News = () => {
-    const [articles, setArticles] = useState([]);
-    const [currentPage, setCurrentPage] = useState(1);
+  const paginate = (event, value) => {
+    setCurrentPage(value);
+  };
 
-    useEffect(() => {
-      const fetchNews = async () => {
-        try {
-          const apiKey = '6372363b03ed4eca80e52282511b7738'; 
-          const keywords = "sustainable development goals";
-          const response = await axios.get(`https://newsapi.org/v2/everything?q=${keywords}&apiKey=${apiKey}&pageSize=20`);
-          setArticles(response.data.articles);
-          console.log(response.data.articles);
-        } catch (error) {
-          console.error('Error fetching news:', error);
-        }
-      };
-  
-      fetchNews();
-    }, []);
+  const lastIndexOfNews = currentPage * newsPerPage;
+  const firstIndexOfNews = lastIndexOfNews - newsPerPage;
 
-    const newsPerPage = 7;
+  const currentNews = articles.slice(firstIndexOfNews, lastIndexOfNews);
+  if (!articles.length) {
+    return <Loader />;
+  }
 
-    const paginate = (event, value) => {
-      setCurrentPage(value);
-    }
-  
-    const lastIndexOfNews = currentPage * newsPerPage;
-    const firstIndexOfNews = lastIndexOfNews - newsPerPage;
-  
-    const currentNews = articles.slice(firstIndexOfNews, lastIndexOfNews);
-    console.log(currentNews[0])
-    if (!articles.length) {
-      return <Loader/>;
-    }
+  const changeTopic = (e) => {
+    setKeyword(e.target.id);
+  };
 
-    const colors = ['#F31D38', '#4C9F38', '#C5192D', '#FF2C1E', '#30B2E5', '#F6C609', '#A21942', '#FB6431', '#DA146A',
-      '#FD9D24', '#BF8B2E', '#FEF3D0', '#0A97D9', '#56C02B', '#00689D', '#19486A'];
-
-    return (
-      <div className='w-screen h-screen overflow-x-hidden flex flex-col'>
-        <Navbar/>
-        <div className='text-3xl w-full h-[20rem] center font-bold bg-[#3F7E44] text-center text-white'>
-          <p className='news-heading my-16'>The Most Recent News Articles Concerning Sustainable Development Goals.</p>
-          <div className=' text-white'> 
-            <ul className='flex gap-5 text-sm font-normal ml-3 p-2'>
-              <li className='items-center'>Latest News</li>
-              <li className='items-center'> Top News</li>
-              <li className='items-center'> Sustainable Development Goals</li>
-              <li className='items-center'> Trending 20</li>
-            </ul>
+  return (
+    <>
+      <div className="main-container">
+        <header className="header-container">
+          <h1 className="header-heading">SDG</h1>
+          <div className="link-container">
+            <span className="icon-container">
+              <FaHome />
+              <Link to="/">Home</Link>
+            </span>
+            <span className="icon-container">
+              <FaBookAtlas />
+              <Link to="/article">Educational</Link>
+            </span>
+            <span className="icon-container">
+              <FaUserPlus />
+              <Link to="/aboutus">About</Link>
+            </span>
           </div>
-        </div>
+        </header>
+        <div className="news-container">
+          <div className="wheather-news-container">
+            <div className="">
+              <div className="wheather-card-container">
+                {weatherData && (
+                  <div className="wheather-card-desk">
+                    <h1 className="self-center md:block hidden">
+                      {weatherData.name}
+                    </h1>
+                    <div className="self-center">
+                      <Clock />
+                    </div>
+                    <div className="self-center flex justify-center items-center">
+                      <img
+                        className="rounded-full w-20 h-20 brightness-[1000%]"
+                        src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
+                      />
+                      <p className="s">{weatherData.weather[0].main}</p>
+                    </div>
+                    <div className="gap-2 grid grid-cols-2">
+                      <div
+                        className="flex flex-col gap-2 justify-center items-center cursor-pointer"
+                        title="temperature"
+                      >
+                        <FaTemperatureHigh />
+                        <span>{weatherData.main.temp}° C</span>
+                      </div>
+                      <div
+                        className="flex flex-col gap-2 justify-center items-center cursor-pointer"
+                        title="humidity"
+                      >
+                        <FaDroplet />
+                        <span>{weatherData.main.humidity}%</span>
+                      </div>
+                      <div
+                        className="flex flex-col gap-2 justify-center items-center cursor-pointer"
+                        title="wind speed"
+                      >
+                        <FaWind />
+                        <span>{weatherData.wind.speed} m/s</span>
+                      </div>
+                      <div
+                        className="flex flex-col gap-2 justify-center items-center cursor-pointer"
+                        title="visibilty"
+                      >
+                        <MdVisibility />
+                        <span>{weatherData.visibility} m</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                <div className="flex flex-col gap-4 md:hidden rounded-2xl text-center">
+                  {togglebar == false && (
+                    <IoIosArrowDown
+                      className="bg-[#101f77] p-1 text-4xl rounded-full self-start border-2 border-black"
+                      onClick={() => {
+                        setToggleBar(!togglebar);
+                      }}
+                    />
+                  )}
+                  {togglebar == true && (
+                    <IoIosArrowUp
+                      className="bg-[#101f77] p-1 text-4xl rounded-full self-start border-2 border-black"
+                      onClick={() => {
+                        setToggleBar(!togglebar);
+                      }}
+                    />
+                  )}
+                  {togglebar && (
+                    <div className="topic-button-container-mb">
+                      <button
+                        id="Poverty"
+                        className="topic-button"
+                        onClick={changeTopic}
+                      >
+                        Poverty
+                      </button>
+                      <button
+                        id="Hunger"
+                        className="topic-button"
+                        onClick={changeTopic}
+                      >
+                        Hunger
+                      </button>
+                      <button
+                        id="Health"
+                        className="topic-button"
+                        onClick={changeTopic}
+                      >
+                        Health
+                      </button>
+                      <button
+                        id="Education"
+                        className="topic-button"
+                        onClick={changeTopic}
+                      >
+                        Education
+                      </button>
+                      <button
+                        id="Gender Equality"
+                        className="topic-button"
+                        onClick={changeTopic}
+                      >
+                        Gender Equality
+                      </button>
+                      <button
+                        id="Sanitation"
+                        className="topic-button"
+                        onClick={changeTopic}
+                      >
+                        Sanitation
+                      </button>
+                      <button
+                        id="Inflation"
+                        className="topic-button"
+                        onClick={changeTopic}
+                      >
+                        Affordabilty
+                      </button>
+                      <button
+                        id="Economic Growth"
+                        className="topic-button"
+                        onClick={changeTopic}
+                      >
+                        Economic Growth
+                      </button>
+                      <button
+                        id="Infrastructure"
+                        className="topic-button"
+                        onClick={changeTopic}
+                      >
+                        Infrastructure
+                      </button>
+                      <button
+                        id="Reduced Inequality"
+                        className="topic-button"
+                        onClick={changeTopic}
+                      >
+                        Reduced Inequality
+                      </button>
+                      <button
+                        id="Sustainable Cities"
+                        className="topic-button"
+                        onClick={changeTopic}
+                      >
+                        Sustainable Cities
+                      </button>
+                      <button
+                        id="Responsible Consumption"
+                        className="topic-button"
+                        onClick={changeTopic}
+                      >
+                        Responsible Consumption
+                      </button>
+                      <button
+                        id="Climate Action"
+                        className="topic-button"
+                        onClick={changeTopic}
+                      >
+                        Climate Action
+                      </button>
+                      <button
+                        id="Life Below Water"
+                        className="topic-button"
+                        onClick={changeTopic}
+                      >
+                        Life Below Water
+                      </button>
+                      <button
+                        id="Life on Land"
+                        className="topic-button"
+                        onClick={changeTopic}
+                      >
+                        Life on Land
+                      </button>
+                      <button
+                        id="Strong Institutions"
+                        className="topic-button"
+                        onClick={changeTopic}
+                      >
+                        Strong Institutions
+                      </button>
+                    </div>
+                  )}
+                </div>
 
-        {/* <div className='flex justify-center w-[100%] mx-auto mt-[25%] '>
-          <div className='w-[80%]'>
-            {currentNews.map((item, index) => (
-              <div
-                key={index}
-                style={{ border: `4px solid ${colors[index % colors.length]}` }}
-                onClick={() => window.open(item.url, '_blank')}
-                className='bg-white cursor-pointer rounded-md mt-10'
-              >
-                <NewsCard news={item} index={firstIndexOfNews+index} /> 
+                <div className="topic-button-container-desk">
+                  <button
+                    id="Poverty"
+                    className="topic-button"
+                    onClick={changeTopic}
+                  >
+                    Poverty
+                  </button>
+                  <button
+                    id="Hunger"
+                    className="topic-button"
+                    onClick={changeTopic}
+                  >
+                    Hunger
+                  </button>
+                  <button
+                    id="Health"
+                    className="topic-button"
+                    onClick={changeTopic}
+                  >
+                    Health
+                  </button>
+                  <button
+                    id="Education"
+                    className="topic-button"
+                    onClick={changeTopic}
+                  >
+                    Education
+                  </button>
+                  <button
+                    id="Gender Equality"
+                    className="topic-button"
+                    onClick={changeTopic}
+                  >
+                    Gender Equality
+                  </button>
+                  <button
+                    id="Sanitation"
+                    className="topic-button"
+                    onClick={changeTopic}
+                  >
+                    Sanitation
+                  </button>
+                  <button
+                    id="Inflation"
+                    className="topic-button"
+                    onClick={changeTopic}
+                  >
+                    Affordabilty
+                  </button>
+                  <button
+                    id="Economic Growth"
+                    className="topic-button"
+                    onClick={changeTopic}
+                  >
+                    Economic Growth
+                  </button>
+                  <button
+                    id="Infrastructure"
+                    className="topic-button"
+                    onClick={changeTopic}
+                  >
+                    Infrastructure
+                  </button>
+                  <button
+                    id="Reduced Inequality"
+                    className="topic-button"
+                    onClick={changeTopic}
+                  >
+                    Reduced Inequality
+                  </button>
+                  <button
+                    id="Sustainable Cities"
+                    className="topic-button"
+                    onClick={changeTopic}
+                  >
+                    Sustainable Cities
+                  </button>
+                  <button
+                    id="Responsible Consumption"
+                    className="topic-button"
+                    onClick={changeTopic}
+                  >
+                    Responsible Consumption
+                  </button>
+                  <button
+                    id="Climate Action"
+                    className="topic-button"
+                    onClick={changeTopic}
+                  >
+                    Climate Action
+                  </button>
+                  <button
+                    id="Life Below Water"
+                    className="topic-button"
+                    onClick={changeTopic}
+                  >
+                    Life Below Water
+                  </button>
+                  <button
+                    id="Life on Land"
+                    className="topic-button"
+                    onClick={changeTopic}
+                  >
+                    Life on Land
+                  </button>
+                  <button
+                    id="Strong Institutions"
+                    className="topic-button"
+                    onClick={changeTopic}
+                  >
+                    Strong Institutions
+                  </button>
+                </div>
+
+                {weatherData && (
+                  <div className="wheather-card-mb">
+                    <div className="flex">
+                      <Clock />
+                      <img
+                        className="rounded-full w-20 h-20 self-center brightness-[1000%]"
+                        src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
+                      />
+                    </div>
+                    <div className="flex flex-col">
+                      <div className="gap-4 grid grid-cols-2 text-xs font-semibold">
+                        <div
+                          className="flex flex-col gap-2 justify-center items-center cursor-pointer"
+                          title="temperature"
+                        >
+                          <FaTemperatureHigh />
+                          <span>{weatherData.main.temp}° </span>
+                        </div>
+                        <div
+                          className="flex flex-col gap-2 justify-center items-center cursor-pointer"
+                          title="humidity"
+                        >
+                          <FaDroplet />
+                          <span>{weatherData.main.humidity}%</span>
+                        </div>
+                        <div
+                          className="flex flex-col gap-2 justify-center items-center cursor-pointer"
+                          title="wind speed"
+                        >
+                          <FaWind />
+                          <span>{weatherData.wind.speed}m/s</span>
+                        </div>
+                        <div
+                          className="flex flex-col gap-2 justify-center items-center cursor-pointer"
+                          title="visibilty"
+                        >
+                          <MdVisibility />
+                          <span>{weatherData.visibility}m</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
-            ))}
+            </div>
+            <div className="newscard-container">
+              {currentNews.map((item, index) => (
+                <NewsCard key={index} news={item} />
+              ))}
+            </div>
           </div>
-        </div> */}
-        <div className='w-full flex flex-1 mt-2'>
-          <div className='w-full p-3' style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(400px,1fr)"}}>
-            {currentNews.map((item,index)=>(
-               <NewsCard key={index} 
-               news = {item}
-               onClick={() => window.open(item.url, '_blank')}
-               />
-            )
+          <Stack className="paginate-stack">
+            {articles.length > newsPerPage && (
+              <Pagination
+                className="white"
+                shape="rounded"
+                defaultPage={1}
+                count={Math.ceil(articles.length / newsPerPage)}
+                page={currentPage}
+                onChange={paginate}
+                size="large"
+                sx={{
+                  "& .MuiPaginationItem-root": {
+                    color: "#101f77",
+                  },
+                  "& .Mui-selected": {
+                    fontSize: "1.4rem", // Optionally, make selected item even larger
+                    fontWeight: "bolder", // And bolder
+                  },
+                }}
+              />
             )}
-          </div>
+          </Stack>
         </div>
-
-        <Stack mt="10px" mb="20px" alignItems="center" justifyContent="center" width="100%">
-          {articles.length > newsPerPage && (
-            <Pagination
-              color="standard"
-              shape="rounded"
-              defaultPage={1}
-              count={Math.ceil(articles.length / newsPerPage)}
-              page={currentPage}
-              onChange={paginate}
-              size="large"
-            />
-          )}
-        </Stack>
       </div>
-    );
-};
+    </>
+  );
+}
 
-export default News;
+export default NewNews;
