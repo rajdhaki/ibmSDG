@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .main-container {
+    @apply h-screen flex flex-col overflow-x-hidden;
+  }
+  /* header */
+  .header-container {
+    @apply p-4 md:p-8 flex justify-between items-center bg-gradient-to-b from-[#ded6c4] from-50% to-[#ded6c49d]  w-full sticky top-[0%];
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .link-container {
+    @apply flex gap-3 text-base md:text-2xl font-bold duration-150;
+  }
+
+  .icon-container {
+    @apply flex gap-1 md:gap-3 items-center border-b-4 border-transparent rounded-2xl hover:shadow-lg hover:border-b-black duration-150 md:py-2 md:px-4 py-2 hover:text-[#ded6c4] hover:bg-[#101f77];
+  }
+  .header-heading {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+
+  /* news and news card */
+  .news-container {
+    @apply flex flex-col justify-center items-center;
+  }
+  .newscard-container {
+    @apply grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-2;
+  }
+  .wheather-news-container {
+    @apply flex flex-col md:flex-row m-4;
+  }
+  .wheather-card-container {
+    @apply m-2 text-white top-28 flex flex-col gap-4 md:w-80;
+  }
+  .wheather-card-mb {
+    @apply p-4 flex flex-row bg-black bg-opacity-80 rounded-2xl justify-center items-center border-2 border-black shadow-md shadow-black md:hidden gap-2;
+  }
+  .wheather-card-desk {
+    @apply p-4 md:p-6 md:flex flex-row justify-evenly md:flex-col gap-4 bg-black bg-opacity-80 rounded-3xl border-2 border-black shadow-md shadow-black hidden;
+  }
+  .topic-button-container-desk {
+    @apply hidden md:flex md:flex-wrap gap-2 min-h-full;
+  }
+
+  .topic-button-container-mb {
+    @apply md:hidden flex flex-wrap gap-2 min-h-full;
+  }
+  .topic-button {
+    @apply py-2 px-4 bg-[#101f77] text-white rounded-2xl border-2 border-b-4 border-black shadow-md;
+  }
+  .news-card {
+    @apply rounded-2xl bg-[#101f77] text-white flex flex-col p-2 gap-2 justify-start border-2 border-b-4 border-black shadow-md shadow-black;
+  }
+  .news-card-titlebar {
+    @apply font-bold text-lg px-2;
+  }
+  .news-card-description {
+    @apply px-2;
+  }
+  .paginate-stack {
+    @apply m-4 text-white rounded-full;
+  }
+  .favicon {
+    @apply rounded-full w-6 h-6 border-2 border-white;
+  }
+}

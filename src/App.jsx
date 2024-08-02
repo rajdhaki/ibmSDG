@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import News from "./components/News";
 import Home from "./pages/Home";
 import About from "./components/About";
-import Footer from './components/Footer';
+import Footer from "./components/Footer";
 import Articles from "./pages/Articles";
 import SDG from "./articles/SDG";
 import SDG1 from "./articles/SDG1";
@@ -114,11 +114,22 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element:<><Navbar/><Home /><Footer/></>,
+    element: (
+      <>
+        <Navbar />
+        <Home />
+        <Footer />
+      </>
+    ),
   },
   {
-    path:"/aboutus",
-    element:<><Navbar/><About/></>,
+    path: "/aboutus",
+    element: (
+      <>
+        <Navbar />
+        <About />
+      </>
+    ),
   },
   {
     path: "/news",
@@ -129,13 +140,12 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-    <RouterProvider router={router}/>
+      <ContextProvider>
+        <Cursor />
+        <RouterProvider router={router}></RouterProvider>
+      </ContextProvider>
     </>
-    // <ContextProvider>
-    //   <RouterProvider router={router}>
-    //     <Cursor />
-    //   </RouterProvider>
-    // </ContextProvider>
+    // <RouterProvider router={router}/>
   );
 }
 
