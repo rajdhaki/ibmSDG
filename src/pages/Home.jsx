@@ -1,8 +1,8 @@
-import React, {useRef} from 'react'
+import React, { useRef } from 'react'
+import "../home.css";
 import Globe from '../components/Globe'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { Link } from 'react-router-dom'
 import {
   Chart,
   ArcElement,
@@ -15,206 +15,149 @@ Chart.register(
   Tooltip,
   Legend
 )
-
 import { Doughnut } from 'react-chartjs-2'
+import context from '../context/Context'
+import Feature from '../components/Feature'
+
+
 
 const Home = () => {
 
-const SDG = useRef(null)
+  const { cursorRef } = React.useContext(context)
 
-useGSAP(()=>{
-  gsap.from(SDG.current, {
-    x : -150,
-    duration : 2,
-    opacity: 0
+  const SDG = useRef(null)
+  const sdgBtn = useRef(null)
+  const featureRef = useRef(null)
+  const reloadHomeRef = useRef(null)
+
+
+
+  useGSAP(() => {
+    gsap.from(SDG.current, {
+      x: -160,
+      duration: 2,
+      opacity: 0
+    })
   })
-})
+
+  const cursorSize = () => {
+    cursorRef.current.innerHTML = "Tab"
+    gsap.to(cursorRef.current, {
+      scale: 3,
+      backgroundColor: "rgb(71 85 105)",
+      pointerEvents: "none"
+    })
+  }
+
+  const defaultCursor = () => {
+    cursorRef.current.innerHTML = ""
+    gsap.to(cursorRef.current, {
+      scale: 1,
+      backgroundColor: "#172554",
+      pointerEvents: "none"
+    })
+  }
+
 
   const data = {
-    labels: ["Yes", "NO"],
+    labels: ["Tree", "Land", "Water"],
     datasets: [{
       label: "poll",
-      data: [3, 6],
-      backgroundColor: ["orange", "blue"],
+      data: [1, 2, 7 ],
+      backgroundColor: ["#00643D", "#57514B", "#385BA8"],
       borderColor: ["white"]
     }]
   }
 
   const data2 = {
-    labels: ["red", "purple", "blue"],
+    // labels: ["India population", "other"],
     datasets: [{
-      label: "poll",
-      data: [3, 6, 2],
-      backgroundColor: ["red", "blue", "purple"],
+      label: ["India population", "other"],
+      data: [2.1, 7.9],
+      backgroundColor: ["#971D1D","#57514B" ],
       borderColor: ["white"]
     }]
   }
 
+  const slides = [
+    { title: "RANKING", para: "Sustainable development ranking evaluates and compares the progress of countries, cities, or organizations toward achieving sustainable development goals (SDGs). These rankings consider various factors that contribute to sustainability, including economic performance, social well-being, and environmental health. By assessing indicators such as GDP growth, innovation, education access, healthcare quality, carbon emissions, and resource management, sustainable development rankings provide a comprehensive overview of how well entities are balancing economic growth, social inclusion, and environmental protection." },
+    { title: "REPORTS", para: "Sustainable development reports are comprehensive documents that track and analyze the progress, challenges, and strategies related to achieving sustainable development goals (SDGs). These reports are produced by governments, organizations, and institutions to provide a detailed overview of their sustainability efforts. They cover a wide range of areas, including economic performance, social progress, and environmental sustainability. Economic indicators such as GDP growth, innovation, and employment rates are evaluated to assess economic development.  " },
+    { title: "NEWS", para: "Sustainable development news encompasses updates, stories, and analyses related to the ongoing efforts and progress toward achieving sustainable development goals (SDGs). This news covers a broad spectrum of topics, including economic, social, and environmental aspects of sustainability. It includes reports on new policies, initiatives, and projects implemented by governments, organizations, and communities to promote sustainable development." }
+  ];
+
+
   return (
     <>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', padding: '1vh 7vw' }}>
-        <div ref={SDG} style={{ flex: 1, padding: '0px 20px', position: 'relative' }}>
-          <div className='flex flex-col absolute -top-44 start-10 text-5xl font-extrabold tracking-wide'>
-            <h1>SUSTAINABLE</h1>
-            <h1>DEVELOPMENT</h1>
-            <h1>GOALS</h1>
+
+      <div className='home-container' ref={reloadHomeRef} >
+
+        <section className='main-content-1'>
+
+          <div className='inner-c-1' ref={SDG}>
+            <div className='inner1-child-c-1'>
+              <h1>SUSTAINABLE</h1>
+              <h1>DEVELOPMENT</h1>
+              <h1>TRACKER</h1>
+            </div>
+
+            <div className='inner2-child-c-1'>
+              <h3 className='text-xl font-bold'>"Our Goals, Our Planet, Our Future"</h3>
+              <p className=' text-lg'>This text emphasizes collective responsibility and future-focused thinking.</p>
+              <button ref={sdgBtn} onMouseEnter={cursorSize} onMouseLeave={defaultCursor} className='mt-4 px-6 py-1 rounded-full border-blue-950 border-2 p-2 self-center bg-slate-300' >Know More</button>
+            </div>
+
+            <div className='inner3-child-c-1'>
+              <h3 className='text-xl font-bold'>"Our Goals, Our Planet, Our Future"</h3>
+              <p className=' text-lg'>This text emphasizes collective responsibility and future-focused thinking.</p>
+              <button ref={sdgBtn} onMouseEnter={cursorSize} onMouseLeave={defaultCursor} className='mt-4 px-6 py-1 rounded-full border-blue-950 border-solid border-2 p-2 self-center bg-slate-300' >Know More</button>
+            </div>
+
           </div>
 
-          <div className='absolute -top-4 px-6'>
-            <h3 className='pb-2 text-xl font-bold'>"Our Goals, Our Planet, Our Future"</h3>
-            <p className=' text-lg'>This text emphasizes collective responsibility and future-focused thinking.</p>
-            <button className='mt-4 px-6 py-1 rounded-full border-blue-950 border-solid border-2 ms-16' >Know  More</button>
-          </div>
-          <div className='absolute top-52 px-6'>
-            <h3 className='pb-2 text-xl font-bold'>"Our Goals, Our Planet, Our Future"</h3>
-            <p className=' text-lg'>This text emphasizes collective responsibility and future-focused thinking.</p>
-            <button className='mt-4 px-6 py-1 rounded-full border-blue-950 border-solid border-2 ms-16' >Know More</button>
-          </div>
+          <div className='inner-c-2'>
 
-          <div className='absolute top-96 mt-11 px-6'>
-            <Link to="/news"> <button className='mt-4 px-6 py-1 rounded-full border-blue-950 border-solid border-2 ms-16' >News</button> </Link> 
-          </div>
-      
-        </div>
-        <div style={{ flex: 2, marginTop: '38vh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-          <Globe />
-          <div>
-            <h3 className='pb-2 text-3xl font-bold text-center '>"Innovate, Implement, Sustain"</h3>
-            <p className=' text-xl text-center px-14'>This option focuses on the process of achieving sustainability—through innovation, implementation, and ongoing commitment.</p>
-          </div>
-        </div>
-        <div style={{ flex: 0, padding: '20px', marginTop: '34vh'}}>
+            <Globe />
 
-          <div>
-            <Doughnut
-              data={data}
-            />
-            <p className='py-4 '>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur et incidunt magni eos pariatur ex.</p>
+            <div className='inner1-child-c-2'>
+              <h3 className='text-3xl font-bold text-center '>"Innovate, Implement, Sustain"</h3>
+              <p className=' text-xl text-center px-14'>This option focuses on the process of achieving sustainability—through innovation, implementation, and ongoing commitment.</p>
+            </div>
+
           </div>
 
-          <div className='mt-14 w-44 ms-14'>
-            <Doughnut
-              data={data2}
-            />
+          <div className='inner-c-3'>
+
+            <div className="inner1-child-c-3">
+              <Doughnut
+                data={data}
+              />
+
+              <p className='pt-2 px-2 '>Plant a Tree, Grow a Future.” “Keep the Earth Green, Save Trees.” “Trees Are Life's Lungs, Protect Them.”</p>
+
+              <button ref={sdgBtn} onMouseEnter={cursorSize} onMouseLeave={defaultCursor} className=' px-2 rounded-full border-blue-950 border-solid border-2 self-center bg-slate-300 text-sm' >Know More</button>
+            </div>
+
+            <div className="inner2-child-c-3">
+              <Doughnut
+                data={data2}
+              />
+            </div>
+
           </div>
+        </section>
 
-
-
-
-        </div>
+        <section className='main-content-2'>
+          <div >
+            <h1 className=' text-5xl font-bold border-solid border-b-2 border-blue-900'>Features</h1>
+            <div ref={featureRef} className='flex justify-center items-center ' >
+              <Feature slides={slides} />
+            </div>
+          </div>
+        </section>
       </div>
+     
     </>
   )
 }
 
 export default Home
-
-
-
-
-
-// import React, {useRef} from 'react'
-// import Globe from '../components/Globe'
-// import gsap from 'gsap'
-// import { useGSAP } from '@gsap/react'
-// import {
-//   Chart,
-//   ArcElement,
-//   Tooltip,
-//   Legend
-// } from 'chart.js'
-
-// Chart.register(
-//   ArcElement,
-//   Tooltip,
-//   Legend
-// )
-
-// import { Doughnut } from 'react-chartjs-2'
-
-// const Home = () => {
-
-// const SDG = useRef(null)
-
-// useGSAP(()=>{
-//   gsap.from(SDG.current, {
-//     x : -150,
-//     duration : 2,
-//     opacity: 0
-//   })
-// })
-
-//   const data = {
-//     labels: ["Yes", "NO"],
-//     datasets: [{
-//       label: "poll",
-//       data: [3, 6],
-//       backgroundColor: ["orange", "blue"],
-//       borderColor: ["white"]
-//     }]
-//   }
-
-//   const data2 = {
-//     labels: ["red", "purple", "blue"],
-//     datasets: [{
-//       label: "poll",
-//       data: [3, 6, 2],
-//       backgroundColor: ["red", "blue", "purple"],
-//       borderColor: ["white"]
-//     }]
-//   }
-
-//   return (
-//     <>
-//       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', padding: '1vh 7vw' }}>
-//         <div ref={SDG} style={{ flex: 1, padding: '0px 20px', position: 'relative' }}>
-//           <div className='flex flex-col absolute -top-44 start-10 text-5xl font-extrabold tracking-wide'>
-//             <h1>SUSTAINABLE</h1>
-//             <h1>DEVELOPMENT</h1>
-//             <h1>GOELS</h1>
-//           </div>
-
-//           <div className='absolute -top-4 px-6'>
-//             <h3 className='pb-2 text-xl font-bold'>"Our Goals, Our Planet, Our Future"</h3>
-//             <p className=' text-lg'>This text emphasizes collective responsibility and future-focused thinking.</p>
-//             <button className='mt-4 px-6 py-1 rounded-full border-blue-950 border-solid border-2 ms-16' >Know More</button>
-//           </div>
-//           <div className='absolute top-52 px-6'>
-//             <h3 className='pb-2 text-xl font-bold'>"Our Goals, Our Planet, Our Future"</h3>
-//             <p className=' text-lg'>This text emphasizes collective responsibility and future-focused thinking.</p>
-//             <button className='mt-4 px-6 py-1 rounded-full border-blue-950 border-solid border-2 ms-16' >Know More</button>
-//           </div>
-      
-//         </div>
-//         <div style={{ flex: 2, marginTop: '38vh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-//           <Globe />
-//           <div>
-//             <h3 className='pb-2 text-3xl font-bold text-center '>"Innovate, Implement, Sustain"</h3>
-//             <p className=' text-xl text-center px-14'>This option focuses on the process of achieving sustainability—through innovation, implementation, and ongoing commitment.</p>
-//           </div>
-//         </div>
-//         <div style={{ flex: 0, padding: '20px', marginTop: '34vh'}}>
-
-//           <div>
-//             <Doughnut
-//               data={data}
-//             />
-//             <p className='py-4 '>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur et incidunt magni eos pariatur ex.</p>
-//           </div>
-
-//           <div className='mt-14 w-44 ms-14'>
-//             <Doughnut
-//               data={data2}
-//             />
-//           </div>
-
-
-
-
-//         </div>
-//       </div>
-//     </>
-//   )
-// }
-
-// export default Home

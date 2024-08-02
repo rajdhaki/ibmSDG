@@ -1,16 +1,22 @@
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
-import Earthimg from '../Images/Earth.jpg'
+import Earthimg from '../Images/Earth.jpg';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 function Globe() {
     const mountRef = useRef(null);
 
     useEffect(() => {
         // Scene setup
-        const width = mountRef.current.clientWidth;
-        const height = mountRef.current.clientHeight;
+        let width = mountRef.current.clientWidth;
+        let height = mountRef.current.clientHeight;
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+        
+        // OrbitControls setup
+        const control = new OrbitControls(camera, mountRef.current);
+        control.enableDamping = true;
+
         const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
         renderer.setClearColor(0x000000, 0);
         renderer.setSize(width, height);
@@ -19,12 +25,14 @@ function Globe() {
         // Earth texture loading
         const loader = new THREE.TextureLoader();
         const earthTexture = loader.load(Earthimg);
+        earthTexture.colorSpace = THREE.SRGBColorSpace;
+        earthTexture.minFilter = THREE.NearestFilter;
 
         // Add Earth globe using sphere geometry
-        const geometry = new THREE.SphereGeometry(8, 32, 32);
+        const geometry = new THREE.SphereGeometry(8, 30, 30);
         const material = new THREE.MeshPhongMaterial({
             map: earthTexture,
-            specular: new THREE.Color('grey') // this gives the water a shiny effect
+            side: THREE.DoubleSide
         });
         const earth = new THREE.Mesh(geometry, material);
         scene.add(earth);
@@ -49,15 +57,27 @@ function Globe() {
 
         animate();
 
-        // Cleanup function to remove the renderer's DOM element
+        // Resizing
+        const handleResize = () => {
+            width = mountRef.current.clientWidth;
+            height = mountRef.current.clientHeight;
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+            renderer.setSize(width, height);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup function to remove the renderer's DOM element and event listener
         return () => {
-            if(mountRef.current){
+            if (mountRef.current) {
                 mountRef.current.removeChild(renderer.domElement);
             }
+            window.removeEventListener('resize', handleResize);
         };
     }, []);
 
-    return <div ref={mountRef} style={{ width: '100%', height: '500px' }} />;
+    return <div ref={mountRef} title="Double click to toggle earth" className="md:w-[100%] md:h-[500px] w-full h-[300px] cursor-pointer" />;
 }
 
 export default Globe;

@@ -1,31 +1,44 @@
-import React, {useContext} from 'react'
-import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
-import { useRef } from 'react'
-import context from '../context/Context'
+import React, { useContext, useRef, useEffect } from 'react';
+import gsap from 'gsap';
+import context from '../context/Context';
 
 const Cursor = () => {
-    const cursor = useRef(null)
+  const cursor = useRef(null);
+  const { setCursorRef } = useContext(context);
 
-    const {setCursorRef} = useContext(context)
-    setCursorRef(cursor)
+  useEffect(() => {
+    setCursorRef(cursor);
 
-    useGSAP(() => {
-        window.addEventListener('mousemove', e => {
-            gsap.to(cursor.current, {
-                x: e.x,
-                y: e.y,
-                ease: "back.out(1.7)",
-                duration: 2
-            })
-        })
-    })
+    const handleMouseMove = (e) => {
+      gsap.to(cursor.current, {
+        x: e.clientX,
+        y: e.clientY,
+        ease: 'back.out(1.7)',
+        duration: 2,
+      });
+    };
 
-    return (
-        
-            <div ref={cursor} id='cursor' className='w-2.5 h-2.5 bg-blue-950 rota rounded-full fixed'></div>
-        
-    )
-}
+    window.addEventListener('mousemove', handleMouseMove);
 
-export default Cursor
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, [setCursorRef]);
+
+  return (
+    <div
+      ref={cursor}
+      id="cursor"
+      style={{
+        fontSize: '5.2px',
+        textAlign: 'center',
+        paddingTop: '0.1rem',
+        pointerEvents: 'none', // Disable pointer events
+      }}
+      className="w-2.5 h-2.5 bg-blue-950 rounded-full fixed z-50 text-white"
+    ></div>
+  );
+};
+
+export default Cursor;
+

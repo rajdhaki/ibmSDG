@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import "../index.css";
 import MobileMenu from "../components/MobileMenu";
 import { NavLink, Outlet } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Articles() {
   const [toggle, setToggle] = useState(false);
-
+  const goback = useNavigate();
   return (
     <div className="article-container">
       <nav className="nav-container">
@@ -18,9 +19,9 @@ function Articles() {
           menu
         </i>
         <h1 className="heading">SDG</h1>
-        <NavLink className="go-back" to="/">
+        <div className="go-back" onClick={()=>{goback(-1)}}>
           Go back
-        </NavLink>
+        </div>
       </nav>
       <div className="outer-container">
         <div className="inner-container">

@@ -1,5 +1,5 @@
 import React from "react";
-import html2pdf from 'html2pdf.js';
+
 
 function SDG() {
   const generatePDF = () => {
@@ -116,9 +116,9 @@ function SDG() {
         justice.
       </p>
     </div>
-      <div className="text-center p-2">
+      {/* <div className="text-center p-2">
          <button onClick={generatePDF}>download</button>
-      </div>
+      </div> */}
    </>
   );
 }

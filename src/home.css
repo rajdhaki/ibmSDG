@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* outer-containers */
+  .home-container {
+    @apply h-screen flex flex-col gap-12 py-12 md:px-32 px-8;
+  }
+  .main-content-1 {
+    @apply flex flex-col md:flex md:flex-row gap-2 justify-center items-center w-full ;
+  }
+  .main-content-2 {
+    
+  }
+  /* inner-containers */
+  .inner-c-1 {
+    @apply flex flex-col h-full gap-6 ;
+  }
+  .inner-c-2 {
+    @apply flex flex-col items-center h-full;
+  }
+  .inner-c-3 {
+    @apply flex flex-col items-center h-full;
+  }
+  /* inner-children */
+  .inner1-child-c-1 {
+    @apply flex flex-col text-4xl md:text-5xl font-extrabold tracking-wide;
+  }
+  .inner2-child-c-1 {
+    @apply flex flex-col gap-2 md:w-[90%] md:self-start w-full;
+  }
+  .inner3-child-c-1 {
+    @apply flex flex-col gap-2 md:w-[90%] md:self-start w-full;
+  }
+  .inner1-child-c-2 {
+    @apply flex flex-col;
+  }
+  .inner1-child-c-3 {
+    @apply flex h-[70%] flex-col gap-3 self-center;
+  }
+  .inner2-child-c-3 {
+    @apply flex flex-col h-[30%] self-center mt-2;
+  }
+}

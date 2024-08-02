@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import News from "./components/News";
 import Home from "./pages/Home";
-import About from "./components/About";
+import About from "./pages/About";
 import Footer from "./components/Footer";
 import Articles from "./pages/Articles";
 import SDG from "./articles/SDG";
@@ -27,12 +27,19 @@ import SDG14 from "./articles/SDG14";
 import SDG15 from "./articles/SDG15";
 import SDG16 from "./articles/SDG16";
 import SDG17 from "./articles/SDG17";
+import SdgTracker from "./pages/SdgTracker";
+import Contact from "./pages/Contact";
 
 //routes
 const router = createBrowserRouter([
   {
-    path: "/article",
-    element: <Articles />,
+    path: "/reports",
+    element: (
+      <>
+        <Navbar />
+        <Articles />
+      </>
+    ),
     children: [
       {
         index: true,
@@ -118,7 +125,17 @@ const router = createBrowserRouter([
       <>
         <Navbar />
         <Home />
-        <Footer />
+        {/* <Footer /> */}
+      </>
+    ),
+  },
+  {
+    path: "/rank",
+    element: (
+      <>
+        <Navbar />
+        <SdgTracker />
+        {/* <Footer /> */}
       </>
     ),
   },
@@ -133,7 +150,21 @@ const router = createBrowserRouter([
   },
   {
     path: "/news",
-    element: <News />,
+    element: (
+      <>
+        <Navbar />
+        <News />
+      </>
+    ),
+  },
+  {
+    path: "/contact",
+    element: (
+      <>
+        <Navbar />
+        <Contact/>
+      </>
+    ),
   },
 ]);
 

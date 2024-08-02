@@ -83,7 +83,7 @@ function NewNews() {
   return (
     <>
       <div className="main-container">
-        <header className="header-container">
+        {/* <header className="header-container">
           <h1 className="header-heading">SDG</h1>
           <div className="link-container">
             <span className="icon-container">
@@ -99,7 +99,7 @@ function NewNews() {
               <Link to="/aboutus">About</Link>
             </span>
           </div>
-        </header>
+        </header> */}
         <div className="news-container">
           <div className="wheather-news-container">
             <div className="">
