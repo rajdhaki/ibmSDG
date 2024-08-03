@@ -18,7 +18,7 @@ const Navbar = (() => {
     //     },[])
 
     return (
-        <div className='flex justify-between items-center px-16 backdrop-blur-md sticky top-0 left-0 z-50' id='parent'>
+        <div className='flex justify-between items-center px-16 backdrop-blur-md sticky top-0 left-0 z-30' id='parent'>
             <div className='flex items-center gap-3 backdrop-blur-lg '>
                 <div className='backdrop-blur-lg' >
                     <img src={Logo} alt='logo' className='h-16 cursor-pointer transform hover:scale-125 transition-all duration-150 ease-in-out' />

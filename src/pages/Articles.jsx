@@ -8,7 +8,7 @@ function Articles() {
   const [toggle, setToggle] = useState(false);
   const goback = useNavigate();
   return (
-    <div className="article-container">
+    <div className="article-container px-32">
       <nav className="nav-container">
         <i
           className="material-icons block md:hidden text-4xl cursor-pointer"
@@ -19,7 +19,7 @@ function Articles() {
           menu
         </i>
         <h1 className="heading">SDG</h1>
-        <div className="go-back" onClick={()=>{goback(-1)}}>
+        <div className="go-back rounded-full text-[#ffcdab] bg-gradient-to-r from-[#003366] to-[#3399CC]" onClick={()=>{goback(-1)}}>
           Go back
         </div>
       </nav>

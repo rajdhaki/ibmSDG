@@ -64,15 +64,15 @@ const Home = () => {
     datasets: [{
       label: "poll",
       data: [1, 2, 7],
-      backgroundColor: ["#00643D", "#57514B", "#385BA8"],
+      backgroundColor: ["#66CC66", "#CC9966", "#3399CC"],
       borderColor: ["white"]
     }]
   }
 
   const data2 = {
-    // labels: ["India population", "other"],
+    labels: ["India population", "other"],
     datasets: [{
-      label: ["India population", "other"],
+      label: "poll",
       data: [2.1, 7.9],
       backgroundColor: ["#971D1D", "#57514B"],
       borderColor: ["white"]
@@ -105,13 +105,13 @@ const Home = () => {
             <div className='inner2-child-c-1'>
               <h3 className='text-xl font-bold'>"Our Goals, Our Planet, Our Future"</h3>
               <p className=' text-lg'>This text emphasizes collective responsibility and future-focused thinking.</p>
-              <button ref={sdgBtn} onClick={clickToReport} onMouseEnter={cursorSize} onMouseLeave={defaultCursor} className='mt-4 px-6 py-1 rounded-full border-blue-950 border-2 p-2 self-center bg-slate-300' >Know More</button>
+              <button ref={sdgBtn} onClick={clickToReport} onMouseEnter={cursorSize} onMouseLeave={defaultCursor} className='mt-4 px-6 py-1 rounded-full border-blue-950 border-2 p-2 self-center text-[#ffcdab] bg-gradient-to-r  from-[#003366] to-[#3399CC]' >Know More</button>
             </div>
 
             <div className='inner3-child-c-1'>
               <h3 className='text-xl font-bold'>"Our Goals, Our Planet, Our Future"</h3>
               <p className=' text-lg'>This text emphasizes collective responsibility and future-focused thinking.</p>
-              <button ref={sdgBtn} onClick={clickToReport} onMouseEnter={cursorSize} onMouseLeave={defaultCursor} className='mt-4 px-6 py-1 rounded-full border-blue-950 border-solid border-2 p-2 self-center bg-slate-300' >Know More</button>
+              <button ref={sdgBtn} onClick={clickToReport} onMouseEnter={cursorSize} onMouseLeave={defaultCursor} className='mt-4 px-6 py-1 rounded-full border-blue-950 border-solid border-2 p-2 self-center text-[#ffcdab] bg-gradient-to-r from-[#003366] to-[#3399CC] ' >Know More</button>
             </div>
 
           </div>
@@ -136,7 +136,7 @@ const Home = () => {
 
               <p className='pt-2 px-2 '>Plant a Tree, Grow a Future.” “Keep the Earth Green, Save Trees.” “Trees Are Life's Lungs, Protect Them.”</p>
 
-              <button ref={sdgBtn} onMouseEnter={cursorSize} onMouseLeave={defaultCursor} onClick={clickToReport} className=' px-2 rounded-full border-blue-950 border-solid border-2 self-center bg-slate-300 text-sm' >Know More</button>
+              <button ref={sdgBtn} onMouseEnter={cursorSize} onMouseLeave={defaultCursor} onClick={clickToReport} className=' px-2 rounded-full border-blue-950 border-solid border-2 self-center bg-slate-300 text-sm text-[#ffcdab] bg-gradient-to-r from-[#003366] to-[#3399CC]' >Know More</button>
             </div>
 
             <div className="inner2-child-c-3">

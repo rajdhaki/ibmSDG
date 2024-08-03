@@ -1,14 +1,23 @@
 import React from "react";
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 
 function SDG() {
-  const generatePDF = () => {
-    const element = document.getElementById('idpdf');
-    html2pdf().from(element).save();
+  const printDocument = () => {
+    const input = pdfRef.current
+    html2canvas(input).then((canvas) => {
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF();
+      pdf.addImage(imgData, 'PNG', 0, 0);
+      pdf.save('download.pdf');
+    });
   };
+  const pdfRef = React.useRef(null)
+
   return (
    <>
-    <div id="idpdf">
+    <div id="idpdf" ref={pdfRef}>
       <h1 className="main-heading">Sustainable Development Goals (SDGs)</h1>
       <br />
       <p>
@@ -116,9 +125,9 @@ function SDG() {
         justice.
       </p>
     </div>
-      {/* <div className="text-center p-2">
-         <button onClick={generatePDF}>download</button>
-      </div> */}
+      <div   className="text-center p-2 text-[#ffcdab] bg-gradient-to-r from-[#003366] to-[#3399CC] rounded-full">
+         <button onClick={printDocument}>Download</button>
+      </div>
    </>
   );
 }

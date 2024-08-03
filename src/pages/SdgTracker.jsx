@@ -102,7 +102,7 @@ console.log(countryData);
           </div>
 
           <div onMouseEnter={cursorSize} onMouseLeave={defaultCursor} style={{ "width": "30%" }}>
-            <button name="" id="" className=' flex items-center justify-center gap-2 font-bold rounded border-black border-solid border-2 px-4 py-3 bg-slate-300 blo' onClick={refreshRotateHandler}  style={{ "width": "100% " }}> Refresh <span ref={refreshButtonRef}><TbRefresh /></span>  </button>
+            <button name="" id="" className=' flex items-center justify-center gap-2 font-bold rounded border-black border-solid border-2 px-4 py-3 text-[#ffcdab] bg-gradient-to-r from-[#003366] to-[#3399CC]' onClick={refreshRotateHandler}  style={{ "width": "100% " }}> Refresh <span ref={refreshButtonRef}><TbRefresh /></span>  </button>
           </div>
 
         </div>

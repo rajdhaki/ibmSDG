@@ -71,7 +71,7 @@ function Sidebar() {
   };
 
   return (
-    <div id="idpdf" ref={pdfRef} className=' px-6 py-4 w-[30%] h-[100%]  bg-slate-300'>
+    <div id="idpdf" ref={pdfRef} className=' px-6 py-16 w-full md:w-[30%] h-[100%] z-40 bg-slate-300'>
 
       <div className='  flex items-center space-x-6 w-full justify-between'>
         <div className='flex '>
@@ -106,7 +106,7 @@ function Sidebar() {
 
       {/* country flag */}
       <div className='flex py-3 space-x-3 justify-center items-center '>
-      <button className='text-sm rounded border-2 border-solid border-blue-950 p-4' onMouseEnter={cursorSize} onMouseLeave={defaultCursor}  onClick={printDocument}>Download profile (PDF)</button>
+      <button className='text-sm rounded border-2 border-solid border-blue-950 p-4 text-[#ffcdab] bg-gradient-to-r from-[#003366] to-[#3399CC]' onMouseEnter={cursorSize} onMouseLeave={defaultCursor}  onClick={printDocument}>Download profile (PDF)</button>
       </div>
        <hr />
       {/* Descrpition */}
