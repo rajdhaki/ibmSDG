@@ -19,7 +19,6 @@ const SdgTracker = () => {
   const refreshButtonRef = React.useRef(null);
   const {countryData, cursorRef} = React.useContext(context)
   
-console.log(countryData);
 
   const changeHandler = e => {
     setHeading(e.target.value)

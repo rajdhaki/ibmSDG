@@ -5,7 +5,7 @@
 @layer base {
   /* outer-containers */
   .home-container {
-    @apply h-screen flex flex-col gap-12 py-12 md:px-32 px-8;
+    @apply h-screen flex flex-col gap-12 py-8 md:px-32 px-8;
   }
   .main-content-1 {
     @apply flex flex-col md:flex md:flex-row gap-2 justify-center items-center w-full ;

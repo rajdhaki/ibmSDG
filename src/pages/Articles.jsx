@@ -3,12 +3,13 @@ import "../index.css";
 import MobileMenu from "../components/MobileMenu";
 import { NavLink, Outlet } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { MdMenuBook } from "react-icons/md";
 
 function Articles() {
   const [toggle, setToggle] = useState(false);
   const goback = useNavigate();
   return (
-    <div className="article-container px-32">
+    <div className="article-container md:px-32 ">
       <nav className="nav-container">
         <i
           className="material-icons block md:hidden text-4xl cursor-pointer"
@@ -16,7 +17,7 @@ function Articles() {
             setToggle(!toggle);
           }}
         >
-          menu
+          <MdMenuBook />
         </i>
         <h1 className="heading">SDG</h1>
         <div className="go-back rounded-full text-[#ffcdab] bg-gradient-to-r from-[#003366] to-[#3399CC]" onClick={()=>{goback(-1)}}>
