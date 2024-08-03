@@ -6,8 +6,8 @@ import gsap from 'gsap';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = (() => {
-    let textItem = useRef(null);
-    let navItem = useRef(null);
+    // let textItem = useRef(null);
+    // let navItem = useRef(null);
     const [open, setOpen] = useState(false)
     const Menus = ["Home", "News", "Education", "About us"]
 
@@ -18,7 +18,7 @@ const Navbar = (() => {
     //     },[])
 
     return (
-        <div  className='flex justify-between items-center px-16 backdrop-blur-md sticky top-0 left-0' id='parent'>
+        <div className='flex justify-between items-center px-16 backdrop-blur-md sticky top-0 left-0 z-50' id='parent'>
             <div className='flex items-center gap-3 backdrop-blur-lg '>
                 <div className='backdrop-blur-lg' >
                     <img src={Logo} alt='logo' className='h-16 cursor-pointer transform hover:scale-125 transition-all duration-150 ease-in-out' />
@@ -33,7 +33,7 @@ const Navbar = (() => {
                 text-xl font-extrabold cursor-pointer'>
                     <li className=' py-1 px-2
                      hover:bg-slate-400  hover:rounded-full '><NavLink to="/">Home</NavLink></li>
-                  <li className=' py-1 px-2
+                    <li className=' py-1 px-2
                      hover:bg-slate-400 hover:rounded-full '><NavLink to="/rank">Ranking</NavLink></li>
                     <li className=' py-1 px-2
                      hover:bg-slate-400 hover:rounded-full '><NavLink to="/reports">Reports</NavLink></li>
@@ -41,7 +41,7 @@ const Navbar = (() => {
                      hover:bg-slate-400  hover:rounded-full '><NavLink to="/news">News</NavLink></li>
                     <li className=' py-1 px-2
                      hover:bg-slate-400 hover:rounded-full'><NavLink to="/aboutus">Aboutus </NavLink></li>
-                                         <li className=' py-1 px-2
+                    <li className=' py-1 px-2
                      hover:bg-slate-400 hover:rounded-full'><NavLink to="/contact">Contactus </NavLink></li>
                 </ul>
             </div>

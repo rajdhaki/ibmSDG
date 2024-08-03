@@ -34,9 +34,9 @@
   }
 
   /* sidebar */
-  .active {
+  /* .active {
     @apply focus:bg-[#101f77] focus:text-[#ded6c4];
-  }
+  } */
   .sidebar-container {
     @apply flex-shrink-0 bg-[#ded6c4] md:flex flex-col justify-start gap-2 overflow-y-scroll text-lg font-bold border-2 border-[#101f77] hidden;
   }

@@ -26,7 +26,7 @@ function NewNews() {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const apiKey = "6372363b03ed4eca80e52282511b7738";
+        const apiKey = "dad07e7fb96240a48f5a30425d8c63e1";
         const response = await axios.get(
           `https://newsapi.org/v2/everything?q=${keyword}&apiKey=${apiKey}&pageSize=20`
         );
