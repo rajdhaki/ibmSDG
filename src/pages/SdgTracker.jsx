@@ -17,9 +17,8 @@ const SdgTracker = () => {
   const [searchTerm, setSearchTerm] = React.useState('')
   const [activeSearch, setActiveSearch] = React.useState('')
   const refreshButtonRef = React.useRef(null);
-  const {countryData, cursorRef} = React.useContext(context)
+  const {countryData, cursorRef,handleSidebar} = React.useContext(context)
   
-
   const changeHandler = e => {
     setHeading(e.target.value)
     // if (e.target.value === 'OVERRALL') {
@@ -66,9 +65,9 @@ const SdgTracker = () => {
   return (
     <>
     <div >
-      <div  className={`backdrop-blur-md w-full h-full fixed top-0 left-0 overflow-y-hidden ${ Object.keys(countryData).length===0 ?   'invisible': 'visible '}`}>
+       { handleSidebar && <div  className={`backdrop-blur-md w-full h-full fixed top-0 left-0 overflow-y-hidden ${ Object.keys(countryData).length===0 ?   'invisible': 'visible '}`}>
       <Sidebar/>
-      </div>
+      </div>}
     
       <div className='md:px-32 py-8 w-full px-10'>
         <div >

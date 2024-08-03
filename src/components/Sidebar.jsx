@@ -1,36 +1,39 @@
 import React from 'react'
 import { RxCross2 } from 'react-icons/rx';
 import context from '../context/Context';
+import gsap from 'gsap';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
-import {Line} from 'react-chartjs-2'
-import { Chart,
-CategoryScale,
-LinearScale,
-LineElement,
-PointElement,
-Title,
-Tooltip,
-Legend
+import { Line } from 'react-chartjs-2'
+import {
+  Chart,
+  CategoryScale,
+  LinearScale,
+  LineElement,
+  PointElement,
+  Title,
+  Tooltip,
+  Legend
 } from 'chart.js';
 
 Chart.register(
-CategoryScale,
-LinearScale,
-LineElement,
-PointElement,
-Title,
-Tooltip,
-Legend
+  CategoryScale,
+  LinearScale,
+  LineElement,
+  PointElement,
+  Title,
+  Tooltip,
+  Legend
 )
 
 
 function Sidebar() {
 
-  const {countryData, cursorRef} = React.useContext(context)
+  const { countryData, cursorRef, setHandleSidebar } = React.useContext(context)
   const pdfRef = React.useRef(null)
-
-  const labels = ["2015","2016","2017","2018","2019","2020","2021", "2022"]
+  const [showSidebar, setShowSidebar] = React.useState(true)
+  setHandleSidebar(showSidebar)
+  const labels = ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"]
   const data = {
     labels: labels,
     datasets: [{
@@ -56,7 +59,7 @@ function Sidebar() {
     gsap.to(cursorRef.current, {
       scale: 1,
       backgroundColor: "#172554",
-      pointerEvents:"none"
+      pointerEvents: "none"
     })
   }
 
@@ -71,14 +74,14 @@ function Sidebar() {
   };
 
   return (
-    <div id="idpdf" ref={pdfRef} className=' px-6 py-16 w-full md:w-[30%] h-[100%] z-40 bg-slate-300'>
+    <div id="idpdf" ref={pdfRef} className={` px-6 py-16 w-full md:w-[30%] h-[100%] z-40 bg-slate-300 `}>
 
       <div className='  flex items-center space-x-6 w-full justify-between'>
         <div className='flex '>
           <h4 className='text-xl font-bold py-2'>{countryData.child2}</h4>
         </div>
         <div onMouseEnter={cursorSize} onMouseLeave={defaultCursor}>
-          <RxCross2  onClick={()=>window.location.reload()}  className='text-2xl' />
+          <RxCross2 onClick={() => setShowSidebar(false)} className={`text-2xl `} />
         </div>
       </div>
       <hr className='text-black' />
@@ -97,8 +100,8 @@ function Sidebar() {
       <hr />
       {/* Graphs */}
       <div className='py-3'>
-        <Line data={data}/>
-        <br/>
+        <Line data={data} />
+        <br />
         <p className='text-sm justify-center'>For Countries with morning data. the most recent your of the backdata SDC index. Score may differ slightly from the published SDG Index Score.</p>
       </div>
       <br />
@@ -106,9 +109,9 @@ function Sidebar() {
 
       {/* country flag */}
       <div className='flex py-3 space-x-3 justify-center items-center '>
-      <button className='text-sm rounded border-2 border-solid border-blue-950 p-4 text-[#ffcdab] bg-gradient-to-r from-[#003366] to-[#3399CC]' onMouseEnter={cursorSize} onMouseLeave={defaultCursor}  onClick={printDocument}>Download profile (PDF)</button>
+        <button className='text-sm rounded border-2 border-solid border-blue-950 p-4 text-[#ffcdab] bg-gradient-to-r from-[#003366] to-[#3399CC]' onMouseEnter={cursorSize} onMouseLeave={defaultCursor} onClick={printDocument}>Download profile (PDF)</button>
       </div>
-       <hr />
+      <hr />
       {/* Descrpition */}
       <div className='py-3'>
         <h2 className='font-bold'> Description</h2>

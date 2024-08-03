@@ -179,19 +179,14 @@ const About = () => {
           />
           <ProfileCard
             name="Sneha Malik"
-            description="I'm Sneha, an aspiring web developer driven by curiosity and a passion for innovation. Currently, I'm deeply engaged in exploring the realm of computer applications at GGSIPU, with ambitions to evolve into a proficient full-stack developer." linkedinLink="https://www.linkedin.com/in/snehamalik09/"
-          />
-          <ProfileCard name="Raj Dhaki" description="Experienced Full Stack Web Developer proficient in React.js, JavaScript, Node.js,
-Express.js, and MongoDB. Skilled in frontend and backend development with a focus on
-UI/UX design integration. Certified in web development from Remark Skill.
-Successfully delivered projects including chat applications, e-commerce platforms, news
-applications, and appointment booking systems. Dedicated to continuous learning and
-innovation" linkedinLink="https://www.linkedin.com/in/raj-dhaki-575469205/" />
-          <ProfileCard name="Jasleen Kaur" description="As a intermediate web developer proficient in JavaScript and React.js, I'm excited to
-apply my skills to create user-friendly web applications. Seeking opportunities to
-grow and contribute to a team, with a special interest in developing projects like a
-doctor appointment booking app." linkedinLink="https://www.linkedin.com/in/jasleen-kaur-3aa573305/" />
+            description="I'm Sneha, an aspiring web developer driven by curiosity and a passion for innovation. Currently, I'm deeply engaged in exploring the realm of computer applications at GGSIPU, with ambitions to evolve into a proficient full-stack developer." linkedinLink="https://www.linkedin.com/in/snehamalik09/"/>
+            
+          <ProfileCard name="Raj Dhaki" description="Experienced Full Stack Web Developer proficient in React.js, JavaScript, Node.js,Express.js, and MongoDB. Skilled in frontend and backend development with a focus onUI/UX design integration. Certified in web development from Remark Skill.Successfully delivered projects including chat applications, e-commerce platforms, newsapplications, and appointment booking systems. Dedicated to continuous learning andinnovation" linkedinLink="https://www.linkedin.com/in/raj-dhaki-575469205/" />
+
+          <ProfileCard name="Jasleen Kaur" description="As a intermediate web developer proficient in JavaScript and React.js, I'm excited toapply my skills to create user-friendly web applications. Seeking opportunities togrow and contribute to a team, with a special interest in developing projects like adoctor appointment booking app." linkedinLink="https://www.linkedin.com/in/jasleen-kaur-3aa573305/" />
+
           <ProfileCard name="Jatin Rawat" description="Hi, I am Jatin Rawat, a student of B.Tech Computer Science and Engineering (Data Science) at JSS Academy Of Technical Education Noida .I am very quick at picking new things and I like to remain punctual." linkedinLink="https://www.linkedin.com/in/jatin-rawat-4a15141a0/" />
+
           <ProfileCard name="Manoj Jaiswal" description="Hello! My name is Manoj Jaiswal, a full-stack developer and MCA student at Vivekananda Institute of Professional Studies. I am skilled in HTML, CSS, JavaScript, React.js, Node.js, and MongoDB. I specialize in creating visually appealing, user-friendly web applications with responsive and interactive user interfaces.Committed to delivering high-quality work, I continuously learn and adapt to new technologies in web development. I look forward to collaborating and bringing innovative solutions to life." linkedinLink="https://www.linkedin.com/in/manoj-jaiswal-682498225/" />
         </div>
         {/* <div className='m-14'>

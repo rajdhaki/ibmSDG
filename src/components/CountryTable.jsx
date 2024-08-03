@@ -6,11 +6,14 @@ import context from '../context/Context'
 
 const CountryTable = ({ heading, activeSearch }) => {
   const [progressBarValues, setProgressBarValues] = React.useState({})
+  const [showSidebar, setShowSidebar] = React.useState(false)
 
   const tableRef = React.useRef(null)
-  const { setCountryData, cursorRef } = React.useContext(context)
+  const { setCountryData, cursorRef, setHandleSidebar } = React.useContext(context)
 
   const clickCountryRow = e => {
+    setShowSidebar(true)
+    setHandleSidebar(showSidebar)
         const row = e.currentTarget;
     const children = Array.from(row.children);
     
@@ -158,7 +161,7 @@ const CountryTable = ({ heading, activeSearch }) => {
               const progressBarValue = progressBarValues[e.country] || 0
 
               return (
-                <tr onMouseEnter={cursorSize} onMouseLeave={defaultCursor} onClick={clickCountryRow} key={index} className={`${index % 2 === 0 ? 'bg-slate-300' : 'bg-transparent'}`} style={{ "borderTop": "1px solid #bababa" }}>
+                <tr onMouseEnter={cursorSize} onMouseLeave={defaultCursor} onClick={clickCountryRow } key={index} className={`${index % 2 === 0 ? 'bg-slate-300' : 'bg-transparent'}`} style={{ "borderTop": "1px solid #bababa" }}>
                   <td className='py-2 '>{index + 1}</td>
                   <td className='flex gap-2 py-2 items-center'>
                     <span> <img src={`https://flagcdn.com/16x12/${flag}.png`} alt="flag" /></span> {e.country}
