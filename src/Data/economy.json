@@ -1,0 +1,262 @@
+[
+  {
+    "source": {
+      "id": null,
+      "name": "BBC News"
+    },
+    "author": null,
+    "title": "Greece starts six-day working week for some industries",
+    "description": "The country says the policy will help boost economic growth.",
+    "url": "https://www.bbc.com/news/articles/czd9g7yzn4jo",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/3438/live/2f231950-3924-11ef-85ba-e5e081cb6e53.jpg",
+    "publishedAt": "2024-07-03T10:36:20Z",
+    "content": "Greece has introduced a six-day working week for certain industries in a bid to boost economic growth. New legislation, which came into effect at the start of July, allows employees to work up to 48… [+1843 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "BBC News"
+    },
+    "author": null,
+    "title": "Labour's plans are not a quick fix for UK economy",
+    "description": "It will take well into next year before we see any impact on economic growth from these plans.",
+    "url": "https://www.bbc.com/news/articles/c978n5ln7g3o",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/808d/live/c6224b70-4430-11ef-b6ff-e7f43eb71781.jpg",
+    "publishedAt": "2024-07-17T12:36:47Z",
+    "content": "The Kings Speech seeks to fix some of the plumbing, wiring and foundations of the economy to get Britain building. It will take well into next year before we see any impact on economic growth from t… [+2592 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "NPR"
+    },
+    "author": "Gregory Rosalsky",
+    "title": "A boom of new businesses in America has stayed strong since summer of 2020",
+    "description": "There's a sustained boom in small business creation in America. We look into what types of new businesses are booming and why this kind of trend has meant economic growth in the past.",
+    "url": "https://www.npr.org/2024/07/04/nx-s1-5026990/a-boom-of-new-businesses-in-america-has-stayed-strong-since-summer-of-2020",
+    "urlToImage": "https://media.npr.org/include/images/facebook-default-wide-s1400-c100.jpg",
+    "publishedAt": "2024-07-04T20:24:43Z",
+    "content": "There's a sustained boom in small business creation in America. We look into what types of new businesses are booming and why this kind of trend has meant economic growth in the past."
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "fdemott@insider.com (Filip De Mott)",
+    "title": "Stock market today: Indexes rise as traders assess earnings and retail sales beat estimates",
+    "description": "Consumer spending remained strong in June, reducing fears of a pullback that could trigger economic weakness.",
+    "url": "https://markets.businessinsider.com/news/stocks/stock-market-today-indexes-retail-data-earnings-estimates-consumer-spending-2024-7",
+    "urlToImage": "https://i.insider.com/669676e45439fb59cebdb3ea?width=1200&format=jpeg",
+    "publishedAt": "2024-07-16T13:41:45Z",
+    "content": "US stocks climbed higher as fresh data indicated that consumers were still spending. Retail sales published Tuesday came in better than expected for June. Excluding autos, sales rose 0.4% against e… [+1625 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "Huileng Tan",
+    "title": "Chinese consumers aren't buying enough stuff, and it's taking a toll on the economy",
+    "description": "Beijing framed China's second-half growth positively but acknowledged \"insufficient\" domestic demand.",
+    "url": "https://www.businessinsider.com/china-economy-second-quarter-gdp-growth-weak-demand-consumption-exports-2024-7",
+    "urlToImage": "https://i.insider.com/66948c4e5439fb59cebd3f85?width=1200&format=jpeg",
+    "publishedAt": "2024-07-15T03:35:15Z",
+    "content": "Residents select products at a supermarket in Shanghai, China.CFOTO/Future Publishing/Getty Images <ul><li>China's economy grew 4.7% in Q2, missing the 5.1% growth forecast by analysts.</li><li>June… [+3138 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "Jacob Zinkula",
+    "title": "The South's economic boom is masking a harsher reality. It still has several of the poorest states in the nation.",
+    "description": "The South's economic boom isn't happening everywhere in the region. Some Southern states are among the poorest in the nation.",
+    "url": "https://www.businessinsider.com/economic-boom-south-poorest-states-us-mississippi-west-virginia-arkansas-2024-7",
+    "urlToImage": "https://i.insider.com/66a2b48eaab37011780aa639?width=1200&format=jpeg",
+    "publishedAt": "2024-07-27T10:08:02Z",
+    "content": "Some Southern cities and states are thriving economically, but others are lagging behind. AP Photo/Lynne Sladky <ul><li>Americans are flocking to the South for jobs, lower taxes, and more affordable… [+6276 chars]"
+  },
+  {
+    "source": {
+      "id": "time",
+      "name": "Time"
+    },
+    "author": "Philipp Carlsson-Szlezak and Paul Swartz",
+    "title": "Enough With the Economic Doomsaying",
+    "description": "‘Passing economics off as a natural science is more than academic frivolity—it is a societal problem,’ said Philipp Carlsson-Szlezak and Paul Swartz",
+    "url": "https://time.com/7005151/stop-economic-doomsaying-essay/",
+    "urlToImage": "https://api.time.com/wp-content/uploads/2024/07/economy-inflation-2024.jpg?quality=85&w=1024&h=628&crop=1",
+    "publishedAt": "2024-07-31T11:00:00Z",
+    "content": "The U.S. economy grew at a robust 2.8% in the second quarter, far faster than economists predictions of just 2%. The miss is reminiscent of a long losing streak for doomsaying about the U.S. economy.… [+13444 chars]"
+  },
+  {
+    "source": {
+      "id": "the-next-web",
+      "name": "The Next Web"
+    },
+    "author": "Rachel Gilley",
+    "title": "TNW Conference 2024 sparks call for collaboration across European tech",
+    "description": "TNW Conference 2024 showed us plenty of pathways the future of tech may take. As I mull over this year’s event, there are several lessons that stand out for Europe’s tech community while it seeks to navigate current challenges and opportunities. Tech growth i…",
+    "url": "https://thenextweb.com/news/tnw-conference-2024-sparks-call-for-collaboration-across-european-tech",
+    "urlToImage": "https://img-cdn.tnwcdn.com/image/tnw-blurple?filter_last=1&fit=1280%2C640&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2023%2F12%2FTNW_15.6_SELECTION-2-1.jpeg&signature=478553242b1d11bfe1a580eadda7b41e",
+    "publishedAt": "2024-07-09T13:43:22Z",
+    "content": "TNW Conference 2024 showed us plenty of pathways the future of tech may take. As I mull over this years event, there are several lessons that stand out for Europes tech community while it seeks to na… [+3209 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Slashdot.org"
+    },
+    "author": "msmash",
+    "title": "Federal Judge Partially Blocks US Ban On Noncompetes",
+    "description": "ZipNada writes: A federal court in Texas has partially blocked the government's ban on noncompete agreements that was set to take effect September 4. An estimated 30 million people, or one in five American workers, are bound by noncompetes. The employment agr…",
+    "url": "https://yro.slashdot.org/story/24/07/04/1333206/federal-judge-partially-blocks-us-ban-on-noncompetes",
+    "urlToImage": "https://a.fsdn.com/sd/topics/business_64.png",
+    "publishedAt": "2024-07-04T15:00:00Z",
+    "content": "A federal court in Texas has partially blocked the government's ban on noncompete agreements that was set to take effect September 4. An estimated 30 million people, or one in five American workers, … [+844 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "Madison Hoff",
+    "title": "The US economy grew way faster than expected this spring",
+    "description": "US real GDP blew past expectations in the year's second quarter. It rose 2.8% compared to a forecast of 2.0%.",
+    "url": "https://www.businessinsider.com/gdp-gross-domestic-product-second-quarter-2024-us-economy-2024-7",
+    "urlToImage": "https://i.insider.com/66a1125480d4d5da13d6a719?width=1200&format=jpeg",
+    "publishedAt": "2024-07-25T12:40:59Z",
+    "content": "FREDERIC J. BROWN/AFP via Getty Images <ul><li>US real GDP increased at an annualized rate of 2.8%, way above the 2.0% forecast.</li><li>That growth is also hotter than the first quarter's 1.4%.</li… [+2134 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "BBC News"
+    },
+    "author": null,
+    "title": "Officials drop Truss budget 'disaster' reference after she complains",
+    "description": "The former PM had argued official documents criticising her premiership showed political bias.",
+    "url": "https://www.bbc.com/news/articles/c80e9kl9r6lo",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/07e0/live/cb02d6f0-4453-11ef-8b31-9dc28c2e0724.jpg",
+    "publishedAt": "2024-07-17T17:43:00Z",
+    "content": "By Paul Seddon, Political reporter Civil servants have changed documents describing Liz Truss's mini-budget as \"disastrous\" after she complained they showed political bias. Briefing notes on the Ki… [+3878 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Marginalrevolution.com"
+    },
+    "author": "Tyler Cowen",
+    "title": "Matt Yglesias on neoliberalism and economic growth",
+    "description": "And it’s worth asking: Is it true that since 1974, policy debate in the United States has been dominated by a “growth-at-all-costs” brand of “free-market fundamentalism”? I don’t think that actually is true. Technically, the biggest pieces of environmental le…",
+    "url": "https://marginalrevolution.com/marginalrevolution/2024/07/matt-yglesias-on-neoliberalism-and-economic-growth.html",
+    "urlToImage": "https://marginalrevolution.com/wp-content/uploads/2016/10/MR-logo-thumbnail.png",
+    "publishedAt": "2024-07-12T05:00:55Z",
+    "content": "And its worth asking: Is it true that since 1974, policy debate in the United States has been dominated by a growth-at-all-costs brand of free-market fundamentalism? I dont think that actually is tr… [+1392 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "MacRumors"
+    },
+    "author": "Hartley Charlton",
+    "title": "Apple Lowers iPhone Prices and Eyes iPad Assembly in India",
+    "description": "Apple has reduced iPhone prices in India for the first time following a cut in import duties and is considering assembling iPads in the country for the first time. As noted by TechCrunch, Apple has lowered the prices of its ‌iPhone‌ models in India by 3…",
+    "url": "https://www.macrumors.com/2024/07/26/apple-cuts-iphone-prices-in-india/",
+    "urlToImage": "https://images.macrumors.com/t/5wxOLbX-nKr9JUfJbc2AezuwqjE=/2880x/article-new/2023/04/Apple-BKC-Mumbai-India-media-preview-hero.jpg",
+    "publishedAt": "2024-07-26T11:45:04Z",
+    "content": "Apple has reduced iPhone prices in India for the first time following a cut in import duties and is considering assembling iPads in the country for the first time. As noted by TechCrunch, Apple has… [+1994 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "Huileng Tan",
+    "title": "China released a 22,000-character plan for its economy that doesn't say very much",
+    "description": "David Lubin, a senior research fellow of global economy and finance at Chatham House, said the plenum was \"long on slogans and short on substance.\"",
+    "url": "https://www.businessinsider.com/china-economy-third-plenum-plan-details-lacking-why2024-7",
+    "urlToImage": "https://i.insider.com/66a063492d66759f66fd9c4d?width=1200&format=jpeg",
+    "publishedAt": "2024-07-24T09:31:35Z",
+    "content": "Chinese leader Xi Jinping.Sergei Guneyev/Pool/AFP/Getty Images <ul><li>China's Third Plenum meeting ended with a vague economic plan, disappointing analysts.</li><li>China's economy is struggling am… [+3758 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Yahoo Entertainment"
+    },
+    "author": "Yuvraj Malik",
+    "title": "Alphabet to report double-digit Q2 growth; AI adoption, ballooning costs in focus",
+    "description": "Google-parent Alphabet is expected to report a nearly 14% rise in quarterly revenue, its fourth straight quarter of double-digit growth, driven by steady...",
+    "url": "https://ca.news.yahoo.com/alphabet-report-double-digit-q2-130145257.html",
+    "urlToImage": "https://media.zenfs.com/en/reuters.com/e868211e25c037586e4ef0a6c1f4bd82",
+    "publishedAt": "2024-07-22T13:01:45Z",
+    "content": "By Yuvraj Malik (Reuters) - Google-parent Alphabet is expected to report a nearly 14% rise in quarterly revenue, its fourth straight quarter of double-digit growth, driven by steady demand for its a… [+2901 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "BBC News"
+    },
+    "author": null,
+    "title": "Concerns over failed sports car deal 'overspend'",
+    "description": "The failed bid is described as \"part of a disappointing pattern\" in terms of attracting businesses.",
+    "url": "https://www.bbc.com/news/articles/c4ngwv2q5p5o",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/3dad/live/672ec690-4ec4-11ef-a307-c9d56a508b94.jpg",
+    "publishedAt": "2024-07-31T21:54:08Z",
+    "content": "A new company resurrected the classic TVR but will not build its new model in Wales The failure of a deal to produce sports cars in Wales was part of a disappointing pattern of Welsh government inve… [+4986 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "Huileng Tan",
+    "title": "Some Russians are spending like no tomorrow with 'considerable' overheating in the economy",
+    "description": "Russia's central bank hiked interest rates from 16% to 18% to cool its overheated wartime economy.",
+    "url": "https://www.businessinsider.com/russian-economy-overheating-consumer-spending-tourism-central-bank-interest-rate-2024-7",
+    "urlToImage": "https://i.insider.com/66a6f991a0fc5856d598106f?width=1200&format=jpeg",
+    "publishedAt": "2024-07-29T06:52:46Z",
+    "content": "The Paveletskaya Plaza shopping mall in Moscow, Russia.Getty Images <ul><li>Russians are spending money freely, with consumption per capita surging over 20% from 2021 to 2023.</li><li>The spending c… [+3354 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Harvard Business Review"
+    },
+    "author": "Bhaskar Chakravorti",
+    "title": "How India Can Fix Its Employment Crisis",
+    "description": "Despite a roaring economy, India is in the middle of an employment crisis: In a country with the world’s largest and youngest workforce, there are very few good jobs to be had. To maintain its economic momentum through consistently high GDP growth, India need…",
+    "url": "https://hbr.org/2024/07/how-india-can-fix-its-employment-crisis",
+    "urlToImage": "https://hbr.org/resources/images/article_assets/2024/07/July24_19_1234856497.jpg",
+    "publishedAt": "2024-07-19T14:00:00Z",
+    "content": "Despite a roaring economy, India is in the middle of an employment crisis: In a country with the world’s largest and youngest workforce, there are very few good jobs to be had. To maintain its econom… [+638 chars]"
+  },
+  {
+    "source": {
+      "id": "time",
+      "name": "Time"
+    },
+    "author": "Charlie Campbell",
+    "title": "Penang’s Chief Minister on Turning a Rich History Into a Dynamic Future",
+    "description": "Chow Kon Yeow spoke to TIME about Penang's economic revival and the island's future.",
+    "url": "https://time.com/7000278/penang-chow-kon-yeow-interview/",
+    "urlToImage": "https://api.time.com/wp-content/uploads/2024/07/image_123650291.jpg?quality=85&w=1080&h=628&crop=1",
+    "publishedAt": "2024-07-21T11:00:00Z",
+    "content": "If, as the Greek philosopher Heraclitus posited, the only constant in life is change, then it follows that reinvention is the key to success. Few places have embraced this truth as fulsomely as Penan… [+12348 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "BBC News"
+    },
+    "author": null,
+    "title": "As Keir Starmer heads to the US, Labour readies for a possible Trump presidency",
+    "description": "If Donald Trump returns to the White House the US could become more isolationist",
+    "url": "https://www.bbc.com/news/articles/cn05yyn941qo",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/4a3c/live/d2564910-3de5-11ef-96a8-e710c6bfc866.png",
+    "publishedAt": "2024-07-09T14:50:54Z",
+    "content": "When it comes to Britains relationship with the United States, the new government has a simple watchword: continuity. One of Sir Keir Starmers first calls in office was to President Joe Biden. Unusua… [+8642 chars]"
+  }
+]

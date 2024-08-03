@@ -7,6 +7,24 @@ import "../news.css";
 import { Link } from "react-router-dom";
 import Clock from "./Clock";
 
+//news json data
+import sdg from "../Data/sdg.json";
+import poverty from "../Data/poverty.json";
+import hunger from "../Data/hunger.json";
+import health from "../Data/health.json";
+import education from "../Data/education.json";
+import genderequality from "../Data/genderequality.json";
+import sanitation from "../Data/sanitation.json";
+import inflation from "../Data/inflation.json";
+import economy from "../Data/economy.json";
+import infrastructure from "../Data/infrastructure.json";
+import reducedinequality from "../Data/reducedinequality.json";
+import cities from "../Data/cities.json";
+import consumption from "../Data/consumption.json";
+import climate from "../Data/climate.json";
+import water from "../Data/water.json";
+import land from "../Data/land.json";
+import law from "../Data/law.json";
 //icons
 import { FaHome } from "react-icons/fa";
 import { FaBookAtlas } from "react-icons/fa6";
@@ -25,13 +43,7 @@ function NewNews() {
   const [keyword, setKeyword] = useState("sustainable development goals");
   useEffect(() => {
     const fetchNews = async () => {
-      try {
-        const apiKey = "dad07e7fb96240a48f5a30425d8c63e1";
-        const response = await axios.get(
-          `https://newsapi.org/v2/everything?q=${keyword}&apiKey=${apiKey}&pageSize=20`
-        );
-        setArticles(response.data.articles);
-      } catch (error) {}
+      setArticles(sdg);
       try {
         const lat = "28.6139";
         const lon = "77.2088";
@@ -41,9 +53,8 @@ function NewNews() {
         );
         setWeatherData(response.data);
       } catch (err) {
-        console.log(err);
         throw err;
-      }
+      } 
     };
 
     fetchNews();
@@ -51,13 +62,72 @@ function NewNews() {
 
   useEffect(() => {
     const fetchNews = async () => {
-      try {
-        const apiKey = "6372363b03ed4eca80e52282511b7738";
-        const response = await axios.get(
-          `https://newsapi.org/v2/everything?q=${keyword}&apiKey=${apiKey}&pageSize=20`
-        );
-        setArticles(response.data.articles);
-      } catch (error) {}
+      switch (keyword) {
+        case "Poverty": {
+          setArticles(poverty);
+          break;
+        }
+        case "Hunger": {
+          setArticles(hunger);
+          break;
+        }
+        case "Health": {
+          setArticles(health);
+          break;
+        }
+        case "Education": {
+          setArticles(education);
+          break;
+        }
+        case "Gender Equality": {
+          setArticles(genderequality);
+          break;
+        }
+        case "Sanitation": {
+          setArticles(sanitation);
+          break;
+        }
+        case "Inflation": {
+          setArticles(inflation);
+          break;
+        }
+        case "Economic Growth": {
+          setArticles(economy);
+          break;
+        }
+        case "Infrastructure": {
+          setArticles(infrastructure);
+          break;
+        }
+        case "Reduced Inequality": {
+          setArticles(reducedinequality);
+          break;
+        }
+        case "Sustainable Cities": {
+          setArticles(cities);
+          break;
+        }
+        case "Responsible Consumption": {
+          setArticles(consumption);
+          break;
+        }
+        case "Climate Action": {
+          setArticles(climate);
+          break;
+        }
+        case "Life Below Water": {
+          setArticles(water);
+          break;
+        }
+        case "Life on Land": {
+          setArticles(land);
+          break;
+        }
+        case "Strong Institutions": {
+          setArticles(law);
+          break;
+        }
+      }
     };
     fetchNews();
   }, [keyword]);

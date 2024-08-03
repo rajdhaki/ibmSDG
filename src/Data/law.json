@@ -1,0 +1,262 @@
+[
+  {
+    "source": {
+      "id": null,
+      "name": "BBC News"
+    },
+    "author": null,
+    "title": "New PM meets political leaders at Stormont",
+    "description": "Sir Keir Starmer will meet the first and deputy first ministers, as well as other parties.",
+    "url": "https://www.bbc.com/news/articles/crgkxx4k3g6o",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/085b/live/25e89de0-3d04-11ef-bbe0-29f79e992ddd.jpg",
+    "publishedAt": "2024-07-08T08:10:44Z",
+    "content": "By Jayne McCormack, BBC News NI political correspondent Sir Keir Starmer is meeting the first and deputy first ministers at Stormont Castle as part of his first visit to Northern Ireland as prime mi… [+5956 chars]"
+  },
+  {
+    "source": {
+      "id": "fox-news",
+      "name": "Fox News"
+    },
+    "author": "Kurt Knutsson, CyberGuy Report",
+    "title": "Android banking Trojan evolves to evade detection and strike globally",
+    "description": "A new variant of the Android banking Trojan Medusa targeting financial institutions has returned, and it appears to be more savvy, according to the CyberGuy.",
+    "url": "https://www.foxnews.com/tech/android-banking-trojan-evolves-evade-detection-strike-globally",
+    "urlToImage": "https://static.foxnews.com/foxnews.com/content/uploads/2024/07/3-Android-banking-trojan-evolves-to-evade-detection-and-strike-globally-hack.jpg",
+    "publishedAt": "2024-07-06T14:00:29Z",
+    "content": "Android banking Trojan Medusa has returned after almost a yearlong hiatus and is now even more dangerous. The new variant of the Trojan is lightweight and requests fewer device permissions to avoid d… [+7476 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Search Engine Journal"
+    },
+    "author": "Adam Heitzman",
+    "title": "SEO For Higher Education: Best Practices For Academic Institutions via @sejournal, @AdamHeitzman",
+    "description": "Learn the importance of a strong SEO strategy for colleges to enhance online visibility, attract prospective students, and increase enrollment. The post SEO For Higher Education: Best Practices For Academic Institutions appeared first on Search Engine Journal.",
+    "url": "https://www.searchenginejournal.com/seo-for-higher-education/519354/",
+    "urlToImage": "https://www.searchenginejournal.com/wp-content/uploads/2024/06/walking-to-school-738.jpg",
+    "publishedAt": "2024-07-17T10:00:29Z",
+    "content": "The competition for student enrollment has never been stronger. Many colleges struggle to stand out online and attract new students. Without a strong SEO strategy, your school remains hidden, and po… [+9947 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Android Central"
+    },
+    "author": "techkritiko@gmail.com (Jay Bonggolto)",
+    "title": "Huge Microsoft Windows outage disrupts services globally",
+    "description": "A CrowdStrike Falcon update is triggering BSODs on Windows PCs, resulting in widespread service disruptions across the world.",
+    "url": "https://www.androidcentral.com/apps-software/huge-microsoft-windows-outage-disrupts-services-globally",
+    "urlToImage": "https://cdn.mos.cms.futurecdn.net/T4rTxG3wQwaQSVBCkNj664-1200-80.jpg",
+    "publishedAt": "2024-07-19T13:17:47Z",
+    "content": "What you need to know <ul><li>A global disruption is causing \"Blue Screen of Death\" (BSOD) errors on Windows PCs, affecting essential services like financial institutions, air travel, media, retail,… [+3508 chars]"
+  },
+  {
+    "source": {
+      "id": "the-next-web",
+      "name": "The Next Web"
+    },
+    "author": "Thomas Macaulay",
+    "title": "UK leads Europe for GenAI patents but Germany is catching up, UN report reveals",
+    "description": "The UK leads Europe for generative AI patent filings — but Germany is closing the gap. That’s according to new data from the World Intellectual Property Organisation (WIPO), a UN agency that tracks patents. WIPO today released a report on 54,000 GenAI inventi…",
+    "url": "https://thenextweb.com/news/uk-tops-europe-ai-patents-un-study",
+    "urlToImage": "https://img-cdn.tnwcdn.com/image/tnw-blurple?filter_last=1&fit=1280%2C640&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2024%2F07%2FGermany-flag-and-UK-flag.jpg&signature=ef0d36734a07b9634efe5061ae6633fb",
+    "publishedAt": "2024-07-03T16:56:50Z",
+    "content": "The UK leads Europe for generative AI patent filings but Germany is closing the gap. Thats according to new data from the World Intellectual Property Organisation (WIPO), a UN agency that tracks pat… [+2788 chars]"
+  },
+  {
+    "source": {
+      "id": "the-verge",
+      "name": "The Verge"
+    },
+    "author": "Tom Warren",
+    "title": "Inside the 78 minutes that took down millions of Windows machines",
+    "description": "CrowdStrike’s tiny 42KB update took down 8.5 million Windows PCs. Now, questions are being asked over how we can avoid a similar tech disaster in the future.",
+    "url": "https://www.theverge.com/2024/7/23/24204196/crowdstrike-windows-bsod-faulty-update-microsoft-responses",
+    "urlToImage": "https://cdn.vox-cdn.com/thumbor/OAzz0j4_mHgkZUbMAO9WdN7rjCc=/0x0:8256x5504/1200x628/filters:focal(4128x2752:4129x2753)/cdn.vox-cdn.com/uploads/chorus_asset/file/25542168/2162005028.jpg",
+    "publishedAt": "2024-07-23T15:40:18Z",
+    "content": "Inside the 78 minutes that took down millions of Windows machines Inside the 78 minutes that took down millions of Windows machines / CrowdStrikes faulty update has kicked off questions about how … [+10853 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "Grace Eliza Goodwin,Lauren Edmonds",
+    "title": "Trump reacts to Biden dropping out of presidential race, mocking him in Truth Social post",
+    "description": "Donald Trump reacted to news that President Joe Biden would drop out of the presidential race in a Truth Social post on Sunday.",
+    "url": "https://www.businessinsider.com/trump-reaction-biden-drops-out-of-election-truth-social-2024-7",
+    "urlToImage": "https://i.insider.com/669d54f580d4d5da13d5a679?width=1200&format=jpeg",
+    "publishedAt": "2024-07-21T18:49:02Z",
+    "content": "Donald Trump criticized President Biden on Truth Social.Anna Moneymaker/Getty Images <ul><li>President Biden dropped out of the presidential race on Sunday. </li><li>Donald Trump reacted to the news… [+2819 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Science Daily"
+    },
+    "author": null,
+    "title": "Male elephants signal 'let's go' with deep rumbles",
+    "description": "Male elephants use infrasonic rumbles to signal group departures, revealing complex vocal coordination and strong social bonds.",
+    "url": "https://www.sciencedaily.com/releases/2024/07/240722155043.htm",
+    "urlToImage": "https://www.sciencedaily.com/images/scidaily-icon.png",
+    "publishedAt": "2024-07-22T19:50:43Z",
+    "content": "The bull elephants gather in the evening coolness to drink. After a spell, a senior male lifts his head and turns from the waterhole. With ears flapping gently, he lets out a deep, resonant rumble.On… [+4916 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "ReadWrite"
+    },
+    "author": "Alvin Hemedez",
+    "title": "Best Meme Coins to Buy Now with Potential for 100x Returns",
+    "description": "Investors widely regard meme coins as one of the fastest-growing cryptos of 2024, making them a popular investment option. Here… Continue reading Best Meme Coins to Buy Now with Potential for 100x Returns The post Best Meme Coins to Buy Now with Potential for…",
+    "url": "https://readwrite.com/best-meme-coins-to-buy-now-with-potential-for-100x-returns/",
+    "urlToImage": "https://readwrite.com/wp-content/uploads/2024/07/best-meme-coins-to-buy-now.jpg",
+    "publishedAt": "2024-07-14T07:56:03Z",
+    "content": "Investors widely regard meme coins as one of the fastest-growing cryptos of 2024, making them a popular investment option. Here are some of the best meme coins to consider buying right now, based on… [+5203 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Psychology Today"
+    },
+    "author": "Lawrence T. White Ph.D.",
+    "title": "Where (in the World) Do Social Liberals Live?",
+    "description": "Social liberals who value personal liberties and strong institutions are more likely to live in certain nations, regions, and culture zones.",
+    "url": "https://www.psychologytoday.com/intl/blog/culture-conscious/202407/where-in-the-world-do-social-liberals-live",
+    "urlToImage": "https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/teaser_image/blog_entry/2024-07/world%20map.jpg?itok=9LZrUAm6",
+    "publishedAt": "2024-07-08T22:39:38Z",
+    "content": "Last week I stumbled across a fascinating book called Freedom Rising, written in 2013 by the German political psychologist Christian Welzel. Welzels book didnt receive much attention outside of acad… [+4892 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "ReadWrite"
+    },
+    "author": "Alvin Hemedez",
+    "title": "This Layer 2 Blockchain Could Lead Meme Coins Higher This Bull Market as Whales Buy In",
+    "description": "It’s well known that whales often hold the reins to significant profits, leveraging their deep understanding of market trends and… Continue reading This Layer 2 Blockchain Could Lead Meme Coins Higher This Bull Market as Whales Buy In The post This Layer 2 Bl…",
+    "url": "https://readwrite.com/this-layer-2-blockchain-could-lead-meme-coins-higher-this-bull-market-as-whales-buy-in/",
+    "urlToImage": "https://readwrite.com/wp-content/uploads/2024/07/this-layer-2-blockchain-could-lead-meme-coins-higher-this-bull-market-as-whales-buy-in.jpg",
+    "publishedAt": "2024-07-31T17:20:15Z",
+    "content": "It’s well known that whales often hold the reins to significant profits, leveraging their deep understanding of market trends and strategic approaches to achieve substantial gains. In contrast, aver… [+4909 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "insider@insider.com (Business Insider)",
+    "title": "CD and Savings Rates Today: Secure Top Rates",
+    "description": "If you're considering opening a savings account or CD today and want a competitive rate, Business Insider did the research to help you find the best rate across popular savings accounts and CD terms.",
+    "url": "https://www.businessinsider.com/cd-rates-savings-rates-today-monday-8-2024-7",
+    "urlToImage": "https://i.insider.com/664f7d2420abc1efe8fd01c7?width=1200&format=jpeg",
+    "publishedAt": "2024-07-08T10:26:02Z",
+    "content": "Affiliate links for the products on this page are from partners that compensate us and terms apply to offers listed (see our advertiser disclosure with our list of partners for more details). However… [+6119 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "insider@insider.com (Business Insider)",
+    "title": "CD and Savings Rates Today: Explore Today's Best Rates",
+    "description": "If you're considering opening a savings account or CD today and want a competitive rate, Business Insider did the research to help you find the best rate across popular savings accounts and CD terms.",
+    "url": "https://www.businessinsider.com/cd-rates-savings-rates-today-saturday-27-2024-7",
+    "urlToImage": "https://i.insider.com/664f7c1320abc1efe8fcfff6?width=1200&format=jpeg",
+    "publishedAt": "2024-07-27T10:02:02Z",
+    "content": "Affiliate links for the products on this page are from partners that compensate us and terms apply to offers listed (see our advertiser disclosure with our list of partners for more details). However… [+6149 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "insider@insider.com (Business Insider)",
+    "title": "CD and Savings Rates Today: Maximize Your Returns",
+    "description": "If you're considering opening a savings account or CD today and want a competitive rate, Business Insider did the research to help you find the best rate across popular savings accounts and CD terms.",
+    "url": "https://www.businessinsider.com/cd-rates-savings-rates-today-friday-5-2024-7",
+    "urlToImage": "https://i.insider.com/664ca54614fb5b23cc5e9d54?width=1200&format=jpeg",
+    "publishedAt": "2024-07-05T10:21:02Z",
+    "content": "Affiliate links for the products on this page are from partners that compensate us and terms apply to offers listed (see our advertiser disclosure with our list of partners for more details). However… [+6119 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "insider@insider.com (Business Insider)",
+    "title": "CD and Savings Rates Today: Supercharge Your Savings",
+    "description": "If you're considering opening a savings account or CD today and want a competitive rate, Business Insider did the research to help you find the best rate across popular savings accounts and CD terms.",
+    "url": "https://www.businessinsider.com/cd-rates-savings-rates-today-thursday-18-2024-7",
+    "urlToImage": "https://i.insider.com/664ca4db9fc063e829b32e23?width=1200&format=jpeg",
+    "publishedAt": "2024-07-18T10:38:02Z",
+    "content": "Affiliate links for the products on this page are from partners that compensate us and terms apply to offers listed (see our advertiser disclosure with our list of partners for more details). However… [+6122 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "insider@insider.com (Business Insider)",
+    "title": "CD and Savings Rates Today: Explore Today's Best Rates",
+    "description": "If you're considering opening a savings account or CD today and want a competitive rate, Business Insider did the research to help you find the best rate across popular savings accounts and CD terms.",
+    "url": "https://www.businessinsider.com/cd-rates-savings-rates-today-saturday-6-2024-7",
+    "urlToImage": "https://i.insider.com/664f7c1320abc1efe8fcfff6?width=1200&format=jpeg",
+    "publishedAt": "2024-07-06T10:22:02Z",
+    "content": "Affiliate links for the products on this page are from partners that compensate us and terms apply to offers listed (see our advertiser disclosure with our list of partners for more details). However… [+6121 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "insider@insider.com (Business Insider)",
+    "title": "CD and Savings Rates Today: Supercharge Your Savings",
+    "description": "If you're considering opening a savings account or CD today and want a competitive rate, Business Insider did the research to help you find the best rate across popular savings accounts and CD terms.",
+    "url": "https://www.businessinsider.com/cd-rates-savings-rates-today-thursday-4-2024-7",
+    "urlToImage": "https://i.insider.com/664ca4db9fc063e829b32e23?width=1200&format=jpeg",
+    "publishedAt": "2024-07-04T10:19:03Z",
+    "content": "Affiliate links for the products on this page are from partners that compensate us and terms apply to offers listed (see our advertiser disclosure with our list of partners for more details). However… [+6121 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "Lauren Crosby Medlicott",
+    "title": "I live in Lithuania, the happiest place on earth for under 30s. As a very happy 28-year-old, here's what it's like.",
+    "description": "A 28-year-old from Vilnius, Lithuania, shares why his home town is the happiest place on earth for young people, per the World Happiness report.",
+    "url": "https://www.businessinsider.com/lithuania-happiest-place-on-earth-under-30s-what-its-like-2024-7",
+    "urlToImage": "https://i.insider.com/669782b25439fb59cebdfcfa?width=1200&format=jpeg",
+    "publishedAt": "2024-07-17T11:18:44Z",
+    "content": "Lithuania was ranked the happiest country under 30s in the World Happiness Report 2024. yegorovnick/Shutterstock <ul><li>Aivaras Vilutis, 28, grew up in Lithuania and moved to Vilnius, the country's… [+6475 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Yahoo Entertainment"
+    },
+    "author": "editorial-team@simplywallst.com (Simply Wall St)",
+    "title": "3 Top Dividend Stocks With Yields Ranging From 3% To 8.3%",
+    "description": "As global markets navigate through a landscape marked by heightened U.S.-China trade tensions and shifting investor focus towards value and small-cap stocks,...",
+    "url": "https://finance.yahoo.com/news/3-top-dividend-stocks-yields-130951546.html",
+    "urlToImage": "https://media.zenfs.com/en/simply_wall_st__316/a3ab99500bb842820119e0d737ca7bfe",
+    "publishedAt": "2024-07-22T13:09:51Z",
+    "content": "As global markets navigate through a landscape marked by heightened U.S.-China trade tensions and shifting investor focus towards value and small-cap stocks, dividend stocks continue to attract atten… [+5793 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Yahoo Entertainment"
+    },
+    "author": "Parisa Hafezi",
+    "title": "Explainer-Iran's president-elect has limited ability to bring change",
+    "description": "The election of relative moderate Masoud Pezeshkian as Iran's president has lifted the hopes of Iranians yearning for social freedoms and better relations...",
+    "url": "https://www.yahoo.com/news/explainer-irans-president-elect-limited-105445317.html",
+    "urlToImage": "https://media.zenfs.com/en/reuters.com/bf9694c34ad8e827d24ed8ded6415d60",
+    "publishedAt": "2024-07-09T10:54:45Z",
+    "content": "By Parisa Hafezi DUBAI (Reuters) - The election of relative moderate Masoud Pezeshkian as Iran's president has lifted the hopes of Iranians yearning for social freedoms and better relations with the… [+5892 chars]"
+  }
+]
