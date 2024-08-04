@@ -224,24 +224,24 @@ function NewNews() {
                 <div className="flex flex-col gap-4 md:hidden rounded-xl text-center">
                   {togglebar == false && (
                     <div
-                      className="flex gap-4 justify-start items-center bg-[#101f77] p-1 text-3xl rounded-full self-center border-2 border-black w-full"
+                      className="flex gap-2 justify-start items-center bg-[#101f77] text-3xl rounded-full self-center border-2 border-black w-full p-2"
                       onClick={() => {
                         setToggleBar(!togglebar);
                       }}
                     >
                       <IoIosArrowDown className="p-1 bg-[#2B2A29] rounded-full" />
-                      <p className="text-lg">News on each goal</p>
+                      <p className="text-sm">Current Topic : {keyword}</p>
                     </div>
                   )}
                   {togglebar == true && (
                     <div
-                      className="flex gap-4 justify-start items-center bg-[#101f77] p-1 text-3xl rounded-full self-center border-2 border-black w-full"
+                      className="flex gap-2 justify-start items-center bg-[#101f77] text-3xl rounded-full self-center border-2 border-black w-full p-2"
                       onClick={() => {
                         setToggleBar(!togglebar);
                       }}
                     >
                       <IoIosArrowUp className="p-1 bg-[#2B2A29] rounded-full" />
-                      <p className="text-lg">News on each goal</p>
+                      <p className="text-sm">Current Topic : {keyword}</p>
                     </div>
                   )}
                   {togglebar && (
