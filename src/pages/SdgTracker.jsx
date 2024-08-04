@@ -1,11 +1,10 @@
 import React from 'react';
 import CountryTable from '../components/CountryTable';
 import { BiSearchAlt } from "react-icons/bi";
-import { RiArrowGoBackFill } from "react-icons/ri";
+import { LuRefreshCw } from "react-icons/lu";
 import gsap from 'gsap'
 import Sidebar from '../components/Sidebar';
 import context from '../context/Context';
-import { useNavigate } from "react-router-dom";
 
 
 const SdgTracker = () => {
@@ -19,7 +18,6 @@ const SdgTracker = () => {
   const [activeSearch, setActiveSearch] = React.useState('')
   const refreshButtonRef = React.useRef(null);
   const {countryData, cursorRef,handleSidebar} = React.useContext(context)
-  const goback = useNavigate();
   
   const changeHandler = e => {
     setHeading(e.target.value)
@@ -37,7 +35,6 @@ const SdgTracker = () => {
   }
 
   const refreshRotateHandler = () => {
-    goback(-1)
     gsap.to(refreshButtonRef.current, {
       rotation: '+=360',
       duration: 2,
@@ -103,7 +100,7 @@ const SdgTracker = () => {
           </div>
 
           <div onMouseEnter={cursorSize} onMouseLeave={defaultCursor} style={{ "width": "30%" }}>
-            <button name="" id="" className=' flex items-center justify-center gap-2 font-bold rounded border-black border-solid border-2 px-4 py-3 text-[#ffcdab] bg-gradient-to-r from-[#003366] to-[#3399CC]' onClick={refreshRotateHandler}  style={{ "width": "100% " }}> Go Back <span ref={refreshButtonRef}><RiArrowGoBackFill /></span>  </button>
+            <button name="" id="" className=' flex items-center justify-center gap-2 font-bold rounded border-black border-solid border-2 px-4 py-3 text-[#ffcdab] bg-gradient-to-r from-[#003366] to-[#3399CC]' onClick={refreshRotateHandler}  style={{ "width": "100% " }}> Refresh <span ref={refreshButtonRef}><LuRefreshCw /></span>  </button>
           </div>
 
         </div>
