@@ -54,7 +54,7 @@ function NewNews() {
         setWeatherData(response.data);
       } catch (err) {
         throw err;
-      } 
+      }
     };
 
     fetchNews();
@@ -221,22 +221,28 @@ function NewNews() {
                     </div>
                   </div>
                 )}
-                <div className="flex flex-col gap-4 md:hidden rounded-2xl text-center">
+                <div className="flex flex-col gap-4 md:hidden rounded-xl text-center">
                   {togglebar == false && (
-                    <IoIosArrowDown
-                      className="bg-[#101f77] p-1 text-4xl rounded-full self-start border-2 border-black"
+                    <div
+                      className="flex gap-4 justify-start items-center bg-[#101f77] p-1 text-3xl rounded-full self-center border-2 border-black w-full"
                       onClick={() => {
                         setToggleBar(!togglebar);
                       }}
-                    />
+                    >
+                      <IoIosArrowDown className="p-1 bg-[#2B2A29] rounded-full" />
+                      <p className="text-lg">News on each goal</p>
+                    </div>
                   )}
                   {togglebar == true && (
-                    <IoIosArrowUp
-                      className="bg-[#101f77] p-1 text-4xl rounded-full self-start border-2 border-black"
+                    <div
+                      className="flex gap-4 justify-start items-center bg-[#101f77] p-1 text-3xl rounded-full self-center border-2 border-black w-full"
                       onClick={() => {
                         setToggleBar(!togglebar);
                       }}
-                    />
+                    >
+                      <IoIosArrowUp className="p-1 bg-[#2B2A29] rounded-full" />
+                      <p className="text-lg">News on each goal</p>
+                    </div>
                   )}
                   {togglebar && (
                     <div className="topic-button-container-mb">
