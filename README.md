@@ -1,7 +1,7 @@
 # Prerequisite
-   1 Code Editor
-   2 Node.js and Npm
-   3 Git
+    Code Editor
+    Node.js and Npm
+    Git
 
 # Installation Process
   # Step 1
