@@ -6,7 +6,7 @@ import context from '../context/Context'
 
 const CountryTable = ({ heading, activeSearch }) => {
   const [progressBarValues, setProgressBarValues] = React.useState({})
-  const [showSidebar, setShowSidebar] = React.useState(false)
+  const [showSidebar, setShowSidebar] = React.useState(Boolean)
 
   const tableRef = React.useRef(null)
   const { setCountryData, cursorRef, setHandleSidebar } = React.useContext(context)
@@ -167,7 +167,7 @@ const CountryTable = ({ heading, activeSearch }) => {
                     <span> <img src={`https://flagcdn.com/16x12/${flag}.png`} alt="flag" /></span> {e.country}
                   </td>
                   <td className='py-2'>{progressBarValue}</td>
-                  <td className='py-2 px-5'>
+                  <td className='py-2 md:px-5 '>
                     <div className="h-2 w-full bg-neutral-200 dark:bg-neutral-600 rounded">
                       <div className="progressBar h-2 rounded-s" style={{
                         width: `${progressBarValue}%`,

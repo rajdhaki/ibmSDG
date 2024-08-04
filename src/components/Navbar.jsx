@@ -8,11 +8,12 @@ import {
   MenuItems,
 } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { NavLink } from "react-router-dom";
 
 const navigation = [
   { name: "Home", href: "/", current: false },
   { name: "Ranking", href: "/rank", current: false },
-  { name: "Educational", href: "/reports", current: false },
+  { name: "Reports", href: "/reports", current: false },
   { name: "News", href: "/news", current: false },
   { name: "About", href: "/aboutus", current: false },
 ];
@@ -25,10 +26,10 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="bg-transparent  sticky top-0 w-screen z-50 p-2 backdrop-blur-lg"
+      className="bg-transparent  sticky top-0 left=0 w-screen z-40 p-2 backdrop-blur-lg"
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 items-center justify-between">
+        <div className="relative flex h-12 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-[#101F77]  hover:text-[#101F77] outline-none ring-[#101F77]">
               <span className="absolute -inset-0.5" />
@@ -54,9 +55,9 @@ export default function Navbar() {
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
-                  <a
+                  <NavLink
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
                     aria-current={item.current ? "page" : undefined}
                     className={classNames(
                       item.current
@@ -66,7 +67,7 @@ export default function Navbar() {
                     )}
                   >
                     {item.name}
-                  </a>
+                  </NavLink>
                 ))}
               </div>
             </div>

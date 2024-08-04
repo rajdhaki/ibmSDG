@@ -35,7 +35,7 @@ const Cursor = () => {
         paddingTop: '0.1rem',
         pointerEvents: 'none', // Disable pointer events
       }}
-      className="w-2.5 h-2.5 bg-blue-950 rounded-full fixed z-50 text-white"
+      className="w-2.5 h-2.5 bg-blue-950 rounded-full md:visible invisible fixed z-50 text-white"
     ></div>
   );
 };
