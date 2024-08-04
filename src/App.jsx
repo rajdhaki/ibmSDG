@@ -33,6 +33,26 @@ import Contact from "./pages/Contact";
 //routes
 const router = createBrowserRouter([
   {
+    path: "/",
+    element: (
+      <>
+        <Navbar />
+        <Home />
+        {/* <Footer /> */}
+      </>
+    ),
+  },
+  {
+    path: "/rank",
+    element: (
+      <>
+        <Navbar />
+        <SdgTracker />
+        {/* <Footer /> */}
+      </>
+    ),
+  },
+  {
     path: "/reports",
     element: (
       <>
@@ -120,22 +140,11 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/",
+    path: "/news",
     element: (
       <>
         <Navbar />
-        <Home />
-        {/* <Footer /> */}
-      </>
-    ),
-  },
-  {
-    path: "/rank",
-    element: (
-      <>
-        <Navbar />
-        <SdgTracker />
-        {/* <Footer /> */}
+        <News />
       </>
     ),
   },
@@ -148,15 +157,7 @@ const router = createBrowserRouter([
       </>
     ),
   },
-  {
-    path: "/news",
-    element: (
-      <>
-        <Navbar />
-        <News />
-      </>
-    ),
-  },
+  
   {
     path: "/contact",
     element: (
