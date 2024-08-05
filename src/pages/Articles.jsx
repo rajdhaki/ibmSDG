@@ -92,7 +92,7 @@ function Articles() {
             </div>
             <footer className="footer-container">
               <h1>
-                Made with ❤️ by <strong>"Script Saviors"</strong>
+                Made with ❤️ by <strong>"scriptSquad"</strong>
               </h1>
             </footer>
           </div>
