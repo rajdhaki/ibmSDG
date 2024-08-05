@@ -1,7 +1,7 @@
 import React from "react";
 import ProfileCard from "../components/ProfileCard";
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,9 +41,7 @@ const About = () => {
   //   }
   // };
   return (
-    <div className="px-32">
-
-      
+    <div className="md:px-20 px-8">
       {/* <div className='m-10'>
             <Carousel responsive={responsive}>
 
@@ -116,8 +114,8 @@ const About = () => {
         <p className="text-3xl text-blue-800  tracking-wide font-extrabold uppercase my-4 py-3 border-b-2 border-solid border-blue-900 ">
           Objective
         </p>
-        <div className="bg-slate-300 shadow-lg shadow-zinc-900/50 py-9 ">
-          <h1 className="text-center font-bold text-2xl">
+        <div className="bg-slate-300 shadow-lg shadow-zinc-900/50 py-9 px-4">
+          <h1 className="text-center font-bold text-2xl px-2">
             The project aims to achieve the following objectives:
           </h1>
           <ol className="m-4 p-3 list-disc">
@@ -171,33 +169,48 @@ const About = () => {
 
       <div className="mt-14 mb-8">
         <p className=" border-b-2 border-solid border-blue-900 py-3 text-blue-900  text-4xl font-extrabold my-16 uppercase">
-          About Team Member </p>
+          About Team Member{" "}
+        </p>
         <div className="grid md:grid-cols-3 grid-col-1 gap-4">
           <ProfileCard
             name="Divyang"
-            description="My expertise lies in full-stack development, with proficiency in HTML, CSS,JavaScript, and backend technologies such as Node.js (Express) and MongoDB (Mongoose)." linkedinLink="https://www.linkedin.com/in/divyang-mundotia-8711a9268/"
+            description="My expertise lies in full-stack development, with proficiency in HTML, CSS,JavaScript, and backend technologies such as Node.js (Express) and MongoDB (Mongoose)."
+            linkedinLink="https://www.linkedin.com/in/divyang-mundotia-8711a9268/"
             Email="(mca_70417704423_divyang@vipstc.edu.in)"
           />
           <ProfileCard
             name="Sneha Malik"
-            description="I'm Sneha, an aspiring web developer driven by curiosity and a passion for innovation. Currently, I'm deeply engaged in exploring the realm of computer applications at GGSIPU, with ambitions to evolve into a proficient full-stack developer." linkedinLink="https://www.linkedin.com/in/snehamalik09/"
+            description="I'm Sneha, an aspiring web developer driven by curiosity and a passion for innovation. Currently, I'm deeply engaged in exploring the realm of computer applications at GGSIPU, with ambitions to evolve into a proficient full-stack developer."
+            linkedinLink="https://www.linkedin.com/in/snehamalik09/"
             Email="(mca_18117704423_sneha@vipstc.edu.in)"
-            />
-            
-          <ProfileCard name="Raj Dhaki" description="Experienced Full Stack Web Developer proficient in React.js, JavaScript, Node.js,Express.js, and MongoDB. Skilled in frontend and backend development with a focus onUI/UX design integration. Certified in web development from Remark Skill.Successfully delivered projects including chat applications, e-commerce platforms, newsapplications, and appointment booking systems. Dedicated to continuous learning andinnovation" linkedinLink="https://www.linkedin.com/in/raj-dhaki-575469205/" 
-          Email="(mca_04617704423_raj@vipstc.edu.in)"
           />
 
-          <ProfileCard name="Jasleen Kaur" description="As a intermediate web developer proficient in JavaScript and React.js, I'm excited toapply my skills to create user-friendly web applications. Seeking opportunities togrow and contribute to a team, with a special interest in developing projects like adoctor appointment booking app." linkedinLink="https://www.linkedin.com/in/jasleen-kaur-3aa573305/"
-          Email ="(mca_05617704423_jasleen@vipstc.edu.in)"
-           />
-
-          <ProfileCard name="Jatin Rawat" description="Hi, I am Jatin Rawat, a student of B.Tech Computer Science and Engineering (Data Science) at JSS Academy Of Technical Education Noida .I am very quick at picking new things and I like to remain punctual." linkedinLink="https://www.linkedin.com/in/jatin-rawat-4a15141a0/" 
-          Email= "(21csds005@jssaten.ac.in)"
+          <ProfileCard
+            name="Raj Dhaki"
+            description="Experienced Full Stack Web Developer proficient in React.js, JavaScript, Node.js,Express.js, and MongoDB. Skilled in frontend and backend development with a focus onUI/UX design integration. Certified in web development from Remark Skill.Successfully delivered projects including chat applications, e-commerce platforms, newsapplications, and appointment booking systems. Dedicated to continuous learning andinnovation"
+            linkedinLink="https://www.linkedin.com/in/raj-dhaki-575469205/"
+            Email="(mca_04617704423_raj@vipstc.edu.in)"
           />
 
-          <ProfileCard name="Manoj Jaiswal" description="Hello! My name is Manoj Jaiswal, a full-stack developer and MCA student at Vivekananda Institute of Professional Studies. I am skilled in HTML, CSS, JavaScript, React.js, Node.js, and MongoDB. I specialize in creating visually appealing, user-friendly web applications with responsive and interactive user interfaces.Committed to delivering high-quality work, I continuously learn and adapt to new technologies in web development. I look forward to collaborating and bringing innovative solutions to life." linkedinLink="https://www.linkedin.com/in/manoj-jaiswal-682498225/"
-          Email = "(mca_1251770423_manoj@vipstc.edu.in)"
+          <ProfileCard
+            name="Jasleen Kaur"
+            description="As a intermediate web developer proficient in JavaScript and React.js, I'm excited toapply my skills to create user-friendly web applications. Seeking opportunities togrow and contribute to a team, with a special interest in developing projects like adoctor appointment booking app."
+            linkedinLink="https://www.linkedin.com/in/jasleen-kaur-3aa573305/"
+            Email="(mca_05617704423_jasleen@vipstc.edu.in)"
+          />
+
+          <ProfileCard
+            name="Jatin Rawat"
+            description="Hi, I am Jatin Rawat, a student of B.Tech Computer Science and Engineering (Data Science) at JSS Academy Of Technical Education Noida .I am very quick at picking new things and I like to remain punctual."
+            linkedinLink="https://www.linkedin.com/in/jatin-rawat-4a15141a0/"
+            Email="(21csds005@jssaten.ac.in)"
+          />
+
+          <ProfileCard
+            name="Manoj Jaiswal"
+            description="Hello! My name is Manoj Jaiswal, a full-stack developer and MCA student at Vivekananda Institute of Professional Studies. I am skilled in HTML, CSS, JavaScript, React.js, Node.js, and MongoDB. I specialize in creating visually appealing, user-friendly web applications with responsive and interactive user interfaces.Committed to delivering high-quality work, I continuously learn and adapt to new technologies in web development. I look forward to collaborating and bringing innovative solutions to life."
+            linkedinLink="https://www.linkedin.com/in/manoj-jaiswal-682498225/"
+            Email="(mca_1251770423_manoj@vipstc.edu.in)"
           />
         </div>
         {/* <div className='m-14'>
