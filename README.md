@@ -1,6 +1,12 @@
-# Color
-backgroundColor : #ded6c4 Color : #101f77
+# Prerequisite
+    Code Editor
+    Node.js and Npm
+    Git
 
-# Font
-font-family: "Nunito Sans", sans-serif;
-
+# Installation Process
+  # Step 1
+    -> git clone https://github.com/rajdhaki/ibmSDG.git
+  # Step 2
+    -> npm install
+  # Step 3
+    -> npm run dev

@@ -16,6 +16,7 @@ const SdgTracker = () => {
   const [sliceNum, setSliceNum] = React.useState(8)
   const [searchTerm, setSearchTerm] = React.useState('')
   const [activeSearch, setActiveSearch] = React.useState('')
+  const [viewMore, setViewMore] = React.useState('more')
   const refreshButtonRef = React.useRef(null);
   const {countryData, cursorRef,handleSidebar} = React.useContext(context)
   
@@ -62,6 +63,17 @@ const SdgTracker = () => {
       pointerEvents: "none"
     })
   }
+
+  const handleViewMore = ()=>{
+    if (sliceNum === 8) {
+      setSliceNum(16)
+      setViewMore('less')
+    }
+    else{
+      setSliceNum(8)
+      setViewMore('more')
+    }
+  }
   return (
     <>
     <div >
@@ -82,7 +94,7 @@ const SdgTracker = () => {
                 return <button onMouseEnter={cursorSize} onMouseLeave={defaultCursor}  key={i} className='px-3 py-2' value={e} onClick={changeHandler} > {e} </button>
               })
             }
-            <button onMouseEnter={cursorSize} onMouseLeave={defaultCursor} className='bg-slate-300 px-1 rounded ms-3 ' style={{ "border": "1px solid #bababa" }} onClick={e => sliceNum === 8 ? setSliceNum(16) : setSliceNum(8)}> View more </button>
+            <button onMouseEnter={cursorSize} onMouseLeave={defaultCursor} className='bg-slate-300 px-1 rounded ms-3 ' style={{ "border": "1px solid #bababa" }} onClick={handleViewMore}> View {viewMore} </button>
           </div>
 
         </div>
